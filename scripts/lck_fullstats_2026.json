@@ -1,0 +1,3947 @@
+[
+  {
+    "enfrentamiento": "Gen.G vs BNK FearX",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 228,
+            "vision_score": 24
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 11,
+            "cs": 220,
+            "vision_score": 61
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 8,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 327,
+            "vision_score": 36
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 5,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 339,
+            "vision_score": 49
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 13,
+            "cs": 28,
+            "vision_score": 156
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 0,
+            "cs": 261,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 6,
+            "cs": 193,
+            "vision_score": 42
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 3,
+            "cs": 259,
+            "vision_score": 25
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 5,
+            "assists": 2,
+            "cs": 297,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 4,
+            "assists": 5,
+            "cs": 29,
+            "vision_score": 127
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 0,
+            "assists": 10,
+            "cs": 223,
+            "vision_score": 27
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 195,
+            "vision_score": 38
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 257,
+            "vision_score": 34
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 5,
+            "deaths": 2,
+            "assists": 5,
+            "cs": 272,
+            "vision_score": 35
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 0,
+            "assists": 11,
+            "cs": 23,
+            "vision_score": 91
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 0,
+            "cs": 229,
+            "vision_score": 39
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 0,
+            "cs": 172,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 0,
+            "cs": 234,
+            "vision_score": 18
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 268,
+            "vision_score": 57
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 36,
+            "vision_score": 85
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 4,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 279,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 9,
+            "cs": 256,
+            "vision_score": 74
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 0,
+            "assists": 12,
+            "cs": 272,
+            "vision_score": 42
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 8,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 336,
+            "vision_score": 65
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 8,
+            "cs": 32,
+            "vision_score": 112
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 3,
+            "cs": 240,
+            "vision_score": 27
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 0,
+            "cs": 205,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 1,
+            "cs": 269,
+            "vision_score": 15
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 1,
+            "cs": 288,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 2,
+            "cs": 27,
+            "vision_score": 102
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "BNK FearX vs Dplus KIA",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 3,
+            "cs": 256,
+            "vision_score": 27
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 5,
+            "assists": 3,
+            "cs": 175,
+            "vision_score": 60
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 310,
+            "vision_score": 29
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 2,
+            "cs": 274,
+            "vision_score": 28
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 21,
+            "vision_score": 76
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 285,
+            "vision_score": 36
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 1,
+            "assists": 16,
+            "cs": 214,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 8,
+            "cs": 281,
+            "vision_score": 34
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 308,
+            "vision_score": 57
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 3,
+            "deaths": 1,
+            "assists": 14,
+            "cs": 22,
+            "vision_score": 107
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 9,
+            "cs": 237,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 2,
+            "assists": 12,
+            "cs": 222,
+            "vision_score": 73
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 9,
+            "deaths": 3,
+            "assists": 6,
+            "cs": 345,
+            "vision_score": 36
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 2,
+            "assists": 7,
+            "cs": 342,
+            "vision_score": 67
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 14,
+            "cs": 31,
+            "vision_score": 153
+          },
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 293,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 7,
+            "cs": 239,
+            "vision_score": 73
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 5,
+            "cs": 308,
+            "vision_score": 44
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 3,
+            "assists": 3,
+            "cs": 340,
+            "vision_score": 33
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 7,
+            "assists": 6,
+            "cs": 35,
+            "vision_score": 135
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 5,
+            "deaths": 0,
+            "assists": 12,
+            "cs": 258,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 6,
+            "deaths": 3,
+            "assists": 10,
+            "cs": 194,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 7,
+            "deaths": 4,
+            "assists": 7,
+            "cs": 244,
+            "vision_score": 32
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 3,
+            "assists": 11,
+            "cs": 330,
+            "vision_score": 38
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 17,
+            "cs": 20,
+            "vision_score": 120
+          },
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 7,
+            "assists": 1,
+            "cs": 241,
+            "vision_score": 36
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 7,
+            "assists": 4,
+            "cs": 182,
+            "vision_score": 52
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 7,
+            "assists": 2,
+            "cs": 232,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 6,
+            "cs": 343,
+            "vision_score": 34
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 9,
+            "cs": 28,
+            "vision_score": 107
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "T1 vs Dplus KIA",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 3,
+            "cs": 279,
+            "vision_score": 40
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 6,
+            "cs": 211,
+            "vision_score": 72
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 8,
+            "cs": 317,
+            "vision_score": 55
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 5,
+            "assists": 5,
+            "cs": 393,
+            "vision_score": 74
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 9,
+            "cs": 38,
+            "vision_score": 102
+          },
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 8,
+            "cs": 263,
+            "vision_score": 36
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 10,
+            "cs": 275,
+            "vision_score": 87
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 5,
+            "cs": 337,
+            "vision_score": 58
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 10,
+            "deaths": 4,
+            "assists": 7,
+            "cs": 364,
+            "vision_score": 71
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 16,
+            "cs": 20,
+            "vision_score": 96
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 264,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 6,
+            "deaths": 7,
+            "assists": 1,
+            "cs": 179,
+            "vision_score": 55
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 0,
+            "deaths": 6,
+            "assists": 4,
+            "cs": 231,
+            "vision_score": 40
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 316,
+            "vision_score": 39
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 6,
+            "assists": 2,
+            "cs": 24,
+            "vision_score": 112
+          },
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 8,
+            "deaths": 4,
+            "assists": 9,
+            "cs": 261,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 8,
+            "deaths": 0,
+            "assists": 8,
+            "cs": 215,
+            "vision_score": 65
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 10,
+            "cs": 280,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 0,
+            "assists": 9,
+            "cs": 305,
+            "vision_score": 44
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 18,
+            "cs": 37,
+            "vision_score": 114
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 335,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 1,
+            "cs": 282,
+            "vision_score": 80
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 1,
+            "cs": 351,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 1,
+            "cs": 416,
+            "vision_score": 53
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 5,
+            "cs": 16,
+            "vision_score": 130
+          },
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 4,
+            "cs": 395,
+            "vision_score": 43
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 6,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 276,
+            "vision_score": 82
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 409,
+            "vision_score": 52
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 7,
+            "cs": 413,
+            "vision_score": 72
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 1,
+            "assists": 14,
+            "cs": 25,
+            "vision_score": 137
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 4",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 351,
+            "vision_score": 39
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 6,
+            "deaths": 3,
+            "assists": 5,
+            "cs": 246,
+            "vision_score": 84
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 6,
+            "cs": 236,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 5,
+            "deaths": 1,
+            "assists": 5,
+            "cs": 404,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 7,
+            "cs": 30,
+            "vision_score": 147
+          },
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 6,
+            "cs": 270,
+            "vision_score": 39
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 8,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 251,
+            "vision_score": 82
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 8,
+            "cs": 274,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 372,
+            "vision_score": 48
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 5,
+            "cs": 37,
+            "vision_score": 166
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 5",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 7,
+            "deaths": 2,
+            "assists": 5,
+            "cs": 286,
+            "vision_score": 32
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 223,
+            "vision_score": 47
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 7,
+            "cs": 258,
+            "vision_score": 56
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 1,
+            "assists": 6,
+            "cs": 354,
+            "vision_score": 57
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 10,
+            "cs": 49,
+            "vision_score": 144
+          },
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 5,
+            "deaths": 6,
+            "assists": 1,
+            "cs": 245,
+            "vision_score": 39
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 238,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 279,
+            "vision_score": 55
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 323,
+            "vision_score": 28
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 33,
+            "vision_score": 129
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "Gen.G vs BNK FearX",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 7,
+            "deaths": 1,
+            "assists": 6,
+            "cs": 299,
+            "vision_score": 45
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 9,
+            "cs": 227,
+            "vision_score": 73
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 14,
+            "cs": 317,
+            "vision_score": 50
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 7,
+            "deaths": 1,
+            "assists": 5,
+            "cs": 329,
+            "vision_score": 33
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 13,
+            "cs": 35,
+            "vision_score": 152
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 3,
+            "cs": 256,
+            "vision_score": 21
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 5,
+            "deaths": 4,
+            "assists": 7,
+            "cs": 209,
+            "vision_score": 60
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 3,
+            "assists": 5,
+            "cs": 330,
+            "vision_score": 50
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 10,
+            "cs": 315,
+            "vision_score": 29
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 8,
+            "cs": 35,
+            "vision_score": 143
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 5,
+            "deaths": 1,
+            "assists": 10,
+            "cs": 325,
+            "vision_score": 62
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 6,
+            "cs": 259,
+            "vision_score": 59
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 5,
+            "deaths": 3,
+            "assists": 5,
+            "cs": 290,
+            "vision_score": 67
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 7,
+            "cs": 343,
+            "vision_score": 66
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 12,
+            "cs": 27,
+            "vision_score": 110
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 277,
+            "vision_score": 42
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 6,
+            "assists": 6,
+            "cs": 194,
+            "vision_score": 48
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 3,
+            "assists": 7,
+            "cs": 315,
+            "vision_score": 33
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 4,
+            "cs": 312,
+            "vision_score": 59
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 10,
+            "cs": 25,
+            "vision_score": 104
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 255,
+            "vision_score": 38
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 0,
+            "deaths": 4,
+            "assists": 3,
+            "cs": 215,
+            "vision_score": 62
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 1,
+            "cs": 272,
+            "vision_score": 28
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 2,
+            "cs": 309,
+            "vision_score": 45
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 22,
+            "vision_score": 94
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 5,
+            "deaths": 1,
+            "assists": 7,
+            "cs": 263,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 5,
+            "deaths": 1,
+            "assists": 6,
+            "cs": 179,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 287,
+            "vision_score": 30
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 11,
+            "cs": 287,
+            "vision_score": 36
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 0,
+            "assists": 13,
+            "cs": 27,
+            "vision_score": 119
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 4",
+        "jugadores": [
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 12,
+            "cs": 210,
+            "vision_score": 35
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 7,
+            "deaths": 0,
+            "assists": 10,
+            "cs": 196,
+            "vision_score": 40
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 6,
+            "deaths": 0,
+            "assists": 9,
+            "cs": 205,
+            "vision_score": 21
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 8,
+            "deaths": 0,
+            "assists": 9,
+            "cs": 234,
+            "vision_score": 24
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 9,
+            "cs": 25,
+            "vision_score": 72
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 2,
+            "cs": 155,
+            "vision_score": 18
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 4,
+            "cs": 158,
+            "vision_score": 35
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 4,
+            "cs": 198,
+            "vision_score": 20
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 0,
+            "cs": 188,
+            "vision_score": 16
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 3,
+            "cs": 26,
+            "vision_score": 78
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "Dplus KIA vs DN SOOPers",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 357,
+            "vision_score": 49
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 3,
+            "assists": 6,
+            "cs": 242,
+            "vision_score": 95
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 7,
+            "cs": 344,
+            "vision_score": 48
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 3,
+            "assists": 5,
+            "cs": 395,
+            "vision_score": 42
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 6,
+            "assists": 12,
+            "cs": 35,
+            "vision_score": 145
+          },
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 6,
+            "cs": 379,
+            "vision_score": 50
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 5,
+            "assists": 12,
+            "cs": 272,
+            "vision_score": 69
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 0,
+            "assists": 5,
+            "cs": 398,
+            "vision_score": 67
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 10,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 415,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 9,
+            "cs": 50,
+            "vision_score": 194
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 1,
+            "assists": 11,
+            "cs": 358,
+            "vision_score": 65
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 0,
+            "deaths": 1,
+            "assists": 12,
+            "cs": 260,
+            "vision_score": 96
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 11,
+            "cs": 354,
+            "vision_score": 59
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 11,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 463,
+            "vision_score": 66
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 12,
+            "cs": 42,
+            "vision_score": 134
+          },
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 6,
+            "assists": 1,
+            "cs": 327,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 7,
+            "cs": 230,
+            "vision_score": 82
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 400,
+            "vision_score": 51
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 5,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 352,
+            "vision_score": 69
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 7,
+            "cs": 33,
+            "vision_score": 157
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 0,
+            "cs": 284,
+            "vision_score": 45
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 3,
+            "cs": 202,
+            "vision_score": 62
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 247,
+            "vision_score": 42
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 328,
+            "vision_score": 32
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 6,
+            "assists": 3,
+            "cs": 44,
+            "vision_score": 151
+          },
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 300,
+            "vision_score": 55
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 7,
+            "deaths": 0,
+            "assists": 11,
+            "cs": 245,
+            "vision_score": 71
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 5,
+            "deaths": 1,
+            "assists": 6,
+            "cs": 281,
+            "vision_score": 38
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 5,
+            "deaths": 1,
+            "assists": 6,
+            "cs": 274,
+            "vision_score": 34
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 14,
+            "cs": 32,
+            "vision_score": 139
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 4",
+        "jugadores": [
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 272,
+            "vision_score": 27
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 222,
+            "vision_score": 49
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 3,
+            "cs": 289,
+            "vision_score": 36
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 1,
+            "assists": 1,
+            "cs": 254,
+            "vision_score": 35
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 4,
+            "assists": 4,
+            "cs": 31,
+            "vision_score": 107
+          },
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 280,
+            "vision_score": 31
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 203,
+            "vision_score": 63
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 1,
+            "assists": 6,
+            "cs": 264,
+            "vision_score": 28
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 7,
+            "deaths": 0,
+            "assists": 3,
+            "cs": 335,
+            "vision_score": 61
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 0,
+            "assists": 10,
+            "cs": 37,
+            "vision_score": 113
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "DN SOOPers vs DRX",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 1,
+            "cs": 243,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 222,
+            "vision_score": 54
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 7,
+            "assists": 3,
+            "cs": 287,
+            "vision_score": 40
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 283,
+            "vision_score": 26
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 7,
+            "assists": 3,
+            "cs": 31,
+            "vision_score": 110
+          },
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 10,
+            "cs": 248,
+            "vision_score": 42
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 7,
+            "deaths": 1,
+            "assists": 13,
+            "cs": 240,
+            "vision_score": 49
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 17,
+            "cs": 324,
+            "vision_score": 33
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 8,
+            "deaths": 0,
+            "assists": 9,
+            "cs": 278,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 16,
+            "cs": 35,
+            "vision_score": 128
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 0,
+            "assists": 12,
+            "cs": 279,
+            "vision_score": 32
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 10,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 230,
+            "vision_score": 69
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 9,
+            "cs": 284,
+            "vision_score": 35
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 5,
+            "deaths": 3,
+            "assists": 15,
+            "cs": 274,
+            "vision_score": 29
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 15,
+            "cs": 34,
+            "vision_score": 146
+          },
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 1,
+            "cs": 259,
+            "vision_score": 38
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 6,
+            "assists": 6,
+            "cs": 200,
+            "vision_score": 52
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 3,
+            "assists": 1,
+            "cs": 259,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 5,
+            "cs": 292,
+            "vision_score": 23
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 7,
+            "assists": 6,
+            "cs": 34,
+            "vision_score": 127
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 5,
+            "cs": 225,
+            "vision_score": 30
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 11,
+            "cs": 192,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 5,
+            "deaths": 4,
+            "assists": 0,
+            "cs": 264,
+            "vision_score": 31
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 6,
+            "assists": 7,
+            "cs": 275,
+            "vision_score": 27
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 2,
+            "assists": 8,
+            "cs": 24,
+            "vision_score": 103
+          },
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 8,
+            "cs": 261,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 11,
+            "cs": 200,
+            "vision_score": 57
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 5,
+            "deaths": 0,
+            "assists": 10,
+            "cs": 286,
+            "vision_score": 26
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 9,
+            "deaths": 3,
+            "assists": 8,
+            "cs": 251,
+            "vision_score": 26
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 4,
+            "assists": 13,
+            "cs": 31,
+            "vision_score": 108
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 4",
+        "jugadores": [
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 7,
+            "deaths": 4,
+            "assists": 6,
+            "cs": 313,
+            "vision_score": 75
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 10,
+            "cs": 237,
+            "vision_score": 69
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 9,
+            "cs": 287,
+            "vision_score": 33
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 10,
+            "deaths": 4,
+            "assists": 8,
+            "cs": 325,
+            "vision_score": 48
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 15,
+            "cs": 25,
+            "vision_score": 138
+          },
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 10,
+            "cs": 315,
+            "vision_score": 52
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 9,
+            "deaths": 0,
+            "assists": 10,
+            "cs": 284,
+            "vision_score": 65
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 12,
+            "cs": 321,
+            "vision_score": 42
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 8,
+            "deaths": 5,
+            "assists": 9,
+            "cs": 295,
+            "vision_score": 40
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 8,
+            "assists": 10,
+            "cs": 22,
+            "vision_score": 140
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "T1 vs BNK FearX",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 6,
+            "assists": 8,
+            "cs": 238,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 5,
+            "deaths": 3,
+            "assists": 14,
+            "cs": 191,
+            "vision_score": 53
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 7,
+            "deaths": 1,
+            "assists": 11,
+            "cs": 301,
+            "vision_score": 56
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 9,
+            "deaths": 7,
+            "assists": 7,
+            "cs": 300,
+            "vision_score": 35
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 21,
+            "cs": 21,
+            "vision_score": 113
+          },
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 11,
+            "cs": 226,
+            "vision_score": 44
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 6,
+            "assists": 10,
+            "cs": 223,
+            "vision_score": 52
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 7,
+            "cs": 291,
+            "vision_score": 56
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 11,
+            "deaths": 8,
+            "assists": 4,
+            "cs": 255,
+            "vision_score": 32
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 16,
+            "cs": 39,
+            "vision_score": 115
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 1,
+            "cs": 321,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 6,
+            "cs": 233,
+            "vision_score": 68
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 4,
+            "cs": 301,
+            "vision_score": 50
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 2,
+            "assists": 1,
+            "cs": 378,
+            "vision_score": 39
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 2,
+            "cs": 39,
+            "vision_score": 171
+          },
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 315,
+            "vision_score": 40
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 12,
+            "cs": 276,
+            "vision_score": 72
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 8,
+            "deaths": 4,
+            "assists": 7,
+            "cs": 298,
+            "vision_score": 31
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 0,
+            "assists": 8,
+            "cs": 378,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 1,
+            "assists": 15,
+            "cs": 34,
+            "vision_score": 164
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 244,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 173,
+            "vision_score": 26
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 0,
+            "cs": 247,
+            "vision_score": 25
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 0,
+            "cs": 215,
+            "vision_score": 20
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 0,
+            "cs": 26,
+            "vision_score": 108
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 259,
+            "vision_score": 29
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 13,
+            "cs": 177,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 5,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 258,
+            "vision_score": 29
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 9,
+            "deaths": 0,
+            "assists": 5,
+            "cs": 284,
+            "vision_score": 30
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 0,
+            "assists": 13,
+            "cs": 27,
+            "vision_score": 98
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 4",
+        "jugadores": [
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 5,
+            "deaths": 2,
+            "assists": 9,
+            "cs": 247,
+            "vision_score": 51
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 1,
+            "assists": 11,
+            "cs": 168,
+            "vision_score": 63
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 9,
+            "cs": 262,
+            "vision_score": 23
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 9,
+            "deaths": 5,
+            "assists": 6,
+            "cs": 229,
+            "vision_score": 27
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 0,
+            "assists": 18,
+            "cs": 27,
+            "vision_score": 99
+          },
+          {
+            "nombre": "Doran",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 235,
+            "vision_score": 26
+          },
+          {
+            "nombre": "Oner",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 6,
+            "cs": 153,
+            "vision_score": 33
+          },
+          {
+            "nombre": "Faker",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 3,
+            "cs": 241,
+            "vision_score": 34
+          },
+          {
+            "nombre": "Peyz",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 5,
+            "cs": 255,
+            "vision_score": 34
+          },
+          {
+            "nombre": "Keria",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 5,
+            "cs": 27,
+            "vision_score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "Gen.G vs Dplus KIA",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 5,
+            "cs": 245,
+            "vision_score": 39
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 7,
+            "assists": 2,
+            "cs": 188,
+            "vision_score": 60
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 1,
+            "cs": 303,
+            "vision_score": 33
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 6,
+            "assists": 2,
+            "cs": 271,
+            "vision_score": 45
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 4,
+            "assists": 5,
+            "cs": 19,
+            "vision_score": 70
+          },
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 14,
+            "cs": 251,
+            "vision_score": 53
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 7,
+            "deaths": 0,
+            "assists": 12,
+            "cs": 247,
+            "vision_score": 57
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 0,
+            "assists": 12,
+            "cs": 329,
+            "vision_score": 53
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 9,
+            "deaths": 2,
+            "assists": 8,
+            "cs": 297,
+            "vision_score": 58
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 3,
+            "deaths": 1,
+            "assists": 20,
+            "cs": 26,
+            "vision_score": 131
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 391,
+            "vision_score": 56
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 9,
+            "cs": 268,
+            "vision_score": 88
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 352,
+            "vision_score": 61
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 11,
+            "deaths": 4,
+            "assists": 4,
+            "cs": 489,
+            "vision_score": 81
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 16,
+            "cs": 34,
+            "vision_score": 157
+          },
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 405,
+            "vision_score": 83
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 8,
+            "cs": 294,
+            "vision_score": 85
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 7,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 400,
+            "vision_score": 71
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 6,
+            "assists": 7,
+            "cs": 445,
+            "vision_score": 78
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 4,
+            "assists": 13,
+            "cs": 27,
+            "vision_score": 157
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 4,
+            "cs": 259,
+            "vision_score": 40
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 6,
+            "cs": 189,
+            "vision_score": 62
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 5,
+            "assists": 5,
+            "cs": 249,
+            "vision_score": 28
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 5,
+            "cs": 329,
+            "vision_score": 42
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 6,
+            "cs": 59,
+            "vision_score": 83
+          },
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 4,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 294,
+            "vision_score": 63
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 6,
+            "deaths": 2,
+            "assists": 7,
+            "cs": 245,
+            "vision_score": 62
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 7,
+            "cs": 313,
+            "vision_score": 39
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 6,
+            "cs": 310,
+            "vision_score": 65
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 11,
+            "cs": 25,
+            "vision_score": 102
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 4",
+        "jugadores": [
+          {
+            "nombre": "Kiin",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 10,
+            "cs": 387,
+            "vision_score": 67
+          },
+          {
+            "nombre": "Canyon",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 1,
+            "assists": 11,
+            "cs": 320,
+            "vision_score": 82
+          },
+          {
+            "nombre": "Chovy",
+            "rol": "MID",
+            "kills": 11,
+            "deaths": 1,
+            "assists": 3,
+            "cs": 417,
+            "vision_score": 76
+          },
+          {
+            "nombre": "Ruler",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 7,
+            "cs": 503,
+            "vision_score": 73
+          },
+          {
+            "nombre": "Duro",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 15,
+            "cs": 27,
+            "vision_score": 185
+          },
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 1,
+            "assists": 6,
+            "cs": 393,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 3,
+            "assists": 5,
+            "cs": 291,
+            "vision_score": 98
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 6,
+            "assists": 4,
+            "cs": 321,
+            "vision_score": 69
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 5,
+            "deaths": 4,
+            "assists": 3,
+            "cs": 488,
+            "vision_score": 68
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 12,
+            "cs": 37,
+            "vision_score": 172
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "Dplus KIA vs DRX",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 9,
+            "assists": 3,
+            "cs": 301,
+            "vision_score": 56
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 7,
+            "assists": 6,
+            "cs": 208,
+            "vision_score": 31
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 6,
+            "cs": 313,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 5,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 380,
+            "vision_score": 34
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 3,
+            "deaths": 5,
+            "assists": 8,
+            "cs": 40,
+            "vision_score": 166
+          },
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 4,
+            "cs": 286,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 6,
+            "deaths": 2,
+            "assists": 11,
+            "cs": 246,
+            "vision_score": 60
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 12,
+            "cs": 354,
+            "vision_score": 52
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 10,
+            "deaths": 5,
+            "assists": 12,
+            "cs": 283,
+            "vision_score": 49
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 15,
+            "cs": 32,
+            "vision_score": 141
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 10,
+            "cs": 351,
+            "vision_score": 59
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 9,
+            "deaths": 2,
+            "assists": 13,
+            "cs": 253,
+            "vision_score": 70
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 8,
+            "deaths": 3,
+            "assists": 8,
+            "cs": 337,
+            "vision_score": 54
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 5,
+            "assists": 10,
+            "cs": 428,
+            "vision_score": 67
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 18,
+            "cs": 34,
+            "vision_score": 117
+          },
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 5,
+            "deaths": 5,
+            "assists": 9,
+            "cs": 307,
+            "vision_score": 59
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 6,
+            "assists": 8,
+            "cs": 274,
+            "vision_score": 83
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 9,
+            "cs": 366,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 9,
+            "deaths": 5,
+            "assists": 5,
+            "cs": 403,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 13,
+            "cs": 45,
+            "vision_score": 132
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 5,
+            "cs": 320,
+            "vision_score": 59
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 9,
+            "cs": 279,
+            "vision_score": 124
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 3,
+            "assists": 3,
+            "cs": 384,
+            "vision_score": 54
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 1,
+            "assists": 3,
+            "cs": 437,
+            "vision_score": 65
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 9,
+            "cs": 38,
+            "vision_score": 177
+          },
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 9,
+            "cs": 345,
+            "vision_score": 69
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 285,
+            "vision_score": 82
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 5,
+            "deaths": 2,
+            "assists": 3,
+            "cs": 437,
+            "vision_score": 61
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 7,
+            "cs": 421,
+            "vision_score": 44
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 11,
+            "cs": 33,
+            "vision_score": 189
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 4",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 0,
+            "assists": 4,
+            "cs": 252,
+            "vision_score": 35
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 1,
+            "assists": 7,
+            "cs": 216,
+            "vision_score": 50
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 0,
+            "assists": 5,
+            "cs": 274,
+            "vision_score": 38
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 288,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 11,
+            "cs": 35,
+            "vision_score": 102
+          },
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 0,
+            "cs": 232,
+            "vision_score": 37
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 0,
+            "deaths": 1,
+            "assists": 2,
+            "cs": 189,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 0,
+            "deaths": 3,
+            "assists": 2,
+            "cs": 239,
+            "vision_score": 33
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 0,
+            "cs": 220,
+            "vision_score": 28
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 1,
+            "assists": 2,
+            "cs": 31,
+            "vision_score": 95
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 5",
+        "jugadores": [
+          {
+            "nombre": "Siwoo",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 4,
+            "cs": 271,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Lucid",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 215,
+            "vision_score": 55
+          },
+          {
+            "nombre": "ShowMaker",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 5,
+            "cs": 283,
+            "vision_score": 29
+          },
+          {
+            "nombre": "Smash",
+            "rol": "ADC",
+            "kills": 7,
+            "deaths": 1,
+            "assists": 3,
+            "cs": 346,
+            "vision_score": 46
+          },
+          {
+            "nombre": "Career",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 39,
+            "vision_score": 96
+          },
+          {
+            "nombre": "Rich",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 1,
+            "cs": 230,
+            "vision_score": 32
+          },
+          {
+            "nombre": "Willer",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 1,
+            "cs": 178,
+            "vision_score": 58
+          },
+          {
+            "nombre": "Ucal",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 0,
+            "cs": 329,
+            "vision_score": 27
+          },
+          {
+            "nombre": "Jiwoo",
+            "rol": "ADC",
+            "kills": 0,
+            "deaths": 2,
+            "assists": 0,
+            "cs": 316,
+            "vision_score": 34
+          },
+          {
+            "nombre": "Andil",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 1,
+            "assists": 0,
+            "cs": 27,
+            "vision_score": 92
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "enfrentamiento": "BNK FearX vs DN SOOPers",
+    "games": [
+      {
+        "game_titulo": "Game 1",
+        "jugadores": [
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 3,
+            "deaths": 1,
+            "assists": 13,
+            "cs": 242,
+            "vision_score": 31
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 15,
+            "cs": 214,
+            "vision_score": 74
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 13,
+            "cs": 283,
+            "vision_score": 30
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 11,
+            "deaths": 1,
+            "assists": 8,
+            "cs": 266,
+            "vision_score": 36
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 20,
+            "cs": 29,
+            "vision_score": 119
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 0,
+            "deaths": 5,
+            "assists": 3,
+            "cs": 202,
+            "vision_score": 28
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 4,
+            "cs": 185,
+            "vision_score": 56
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 5,
+            "assists": 0,
+            "cs": 278,
+            "vision_score": 22
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 281,
+            "vision_score": 19
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 2,
+            "cs": 25,
+            "vision_score": 122
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 2",
+        "jugadores": [
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 6,
+            "cs": 354,
+            "vision_score": 77
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 5,
+            "assists": 2,
+            "cs": 270,
+            "vision_score": 89
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 1,
+            "deaths": 6,
+            "assists": 4,
+            "cs": 354,
+            "vision_score": 42
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 4,
+            "deaths": 3,
+            "assists": 1,
+            "cs": 367,
+            "vision_score": 58
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 3,
+            "cs": 43,
+            "vision_score": 176
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 3,
+            "assists": 8,
+            "cs": 341,
+            "vision_score": 56
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 12,
+            "deaths": 3,
+            "assists": 8,
+            "cs": 249,
+            "vision_score": 85
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 6,
+            "deaths": 2,
+            "assists": 9,
+            "cs": 321,
+            "vision_score": 60
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 3,
+            "deaths": 2,
+            "assists": 10,
+            "cs": 429,
+            "vision_score": 67
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 16,
+            "cs": 30,
+            "vision_score": 176
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 3",
+        "jugadores": [
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 10,
+            "cs": 205,
+            "vision_score": 27
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 4,
+            "deaths": 1,
+            "assists": 11,
+            "cs": 205,
+            "vision_score": 44
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 11,
+            "cs": 231,
+            "vision_score": 29
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 7,
+            "deaths": 0,
+            "assists": 6,
+            "cs": 274,
+            "vision_score": 43
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 1,
+            "deaths": 1,
+            "assists": 10,
+            "cs": 29,
+            "vision_score": 94
+          },
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 1,
+            "cs": 238,
+            "vision_score": 32
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 184,
+            "vision_score": 47
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 5,
+            "assists": 1,
+            "cs": 210,
+            "vision_score": 20
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 1,
+            "cs": 237,
+            "vision_score": 28
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 0,
+            "deaths": 4,
+            "assists": 3,
+            "cs": 40,
+            "vision_score": 116
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 4",
+        "jugadores": [
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 2,
+            "assists": 2,
+            "cs": 251,
+            "vision_score": 38
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 2,
+            "deaths": 4,
+            "assists": 6,
+            "cs": 201,
+            "vision_score": 63
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 4,
+            "deaths": 3,
+            "assists": 4,
+            "cs": 298,
+            "vision_score": 25
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 6,
+            "deaths": 5,
+            "assists": 6,
+            "cs": 277,
+            "vision_score": 26
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 2,
+            "deaths": 3,
+            "assists": 10,
+            "cs": 19,
+            "vision_score": 110
+          },
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 6,
+            "deaths": 1,
+            "assists": 5,
+            "cs": 303,
+            "vision_score": 41
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 3,
+            "deaths": 0,
+            "assists": 7,
+            "cs": 235,
+            "vision_score": 69
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 3,
+            "deaths": 4,
+            "assists": 5,
+            "cs": 252,
+            "vision_score": 32
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 5,
+            "assists": 4,
+            "cs": 255,
+            "vision_score": 38
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 3,
+            "deaths": 5,
+            "assists": 7,
+            "cs": 48,
+            "vision_score": 135
+          }
+        ]
+      },
+      {
+        "game_titulo": "Game 5",
+        "jugadores": [
+          {
+            "nombre": "DuDu",
+            "rol": "TOP",
+            "kills": 6,
+            "deaths": 3,
+            "assists": 7,
+            "cs": 359,
+            "vision_score": 73
+          },
+          {
+            "nombre": "Pyosik",
+            "rol": "JUNGLE",
+            "kills": 0,
+            "deaths": 4,
+            "assists": 13,
+            "cs": 208,
+            "vision_score": 73
+          },
+          {
+            "nombre": "Clozer",
+            "rol": "MID",
+            "kills": 7,
+            "deaths": 6,
+            "assists": 5,
+            "cs": 355,
+            "vision_score": 39
+          },
+          {
+            "nombre": "deokdam",
+            "rol": "ADC",
+            "kills": 2,
+            "deaths": 8,
+            "assists": 10,
+            "cs": 301,
+            "vision_score": 56
+          },
+          {
+            "nombre": "Peter",
+            "rol": "SUPPORT",
+            "kills": 3,
+            "deaths": 7,
+            "assists": 11,
+            "cs": 37,
+            "vision_score": 149
+          },
+          {
+            "nombre": "Clear",
+            "rol": "TOP",
+            "kills": 1,
+            "deaths": 4,
+            "assists": 12,
+            "cs": 292,
+            "vision_score": 62
+          },
+          {
+            "nombre": "Raptor",
+            "rol": "JUNGLE",
+            "kills": 9,
+            "deaths": 4,
+            "assists": 14,
+            "cs": 222,
+            "vision_score": 75
+          },
+          {
+            "nombre": "Vicla",
+            "rol": "MID",
+            "kills": 5,
+            "deaths": 3,
+            "assists": 13,
+            "cs": 345,
+            "vision_score": 35
+          },
+          {
+            "nombre": "Diable",
+            "rol": "ADC",
+            "kills": 8,
+            "deaths": 6,
+            "assists": 9,
+            "cs": 413,
+            "vision_score": 69
+          },
+          {
+            "nombre": "Kellin",
+            "rol": "SUPPORT",
+            "kills": 4,
+            "deaths": 2,
+            "assists": 18,
+            "cs": 42,
+            "vision_score": 147
+          }
+        ]
+      }
+    ]
+  }
+]

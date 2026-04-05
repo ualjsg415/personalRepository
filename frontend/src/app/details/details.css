@@ -1,0 +1,120 @@
+.details-layout {
+  display: grid;
+  gap: 20px;
+}
+
+.match-header {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid #cadbff;
+  background: rgba(248, 251, 255, 0.9);
+}
+
+.match-header h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
+}
+
+.match-header p {
+  color: var(--muted-color);
+}
+
+.games-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.game-card {
+  --game-accent: #0f766e;
+  border-radius: 20px;
+  border: 1px solid #d8e4ff;
+  border-top: 8px solid var(--game-accent);
+  background: var(--surface-color);
+  box-shadow: 0 10px 24px rgba(11, 19, 43, 0.09);
+  padding: 14px;
+}
+
+.game-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.game-card-header h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+}
+
+.game-card-header span {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--game-accent);
+  color: var(--game-accent);
+}
+
+.teams-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.team-stats {
+  background: #fff;
+  border: 1px solid #e4ecff;
+  border-radius: 14px;
+  overflow: auto;
+}
+
+.team-stats h4 {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e4ecff;
+  background: #f4f8ff;
+  font-size: 1rem;
+}
+
+table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+thead th {
+  background: #edf4ff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9fbff;
+}
+
+.empty-state {
+  border-radius: 16px;
+  border: 1px dashed #9db2df;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--muted-color);
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .teams-stats {
+    grid-template-columns: 1fr;
+  }
+}

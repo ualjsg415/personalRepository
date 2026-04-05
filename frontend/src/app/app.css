@@ -1,0 +1,38 @@
+:host {
+  --content-padding: clamp(14px, 2vw, 26px);
+  display: block;
+}
+main.app-shell {
+  min-height: 100vh;
+}
+header.brand-name {
+  padding: var(--content-padding);
+  box-shadow: 0 8px 24px var(--shadow-color);
+  background: rgba(248, 251, 255, 0.92);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+}
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.brand-text h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+.brand-text p {
+  margin-top: 4px;
+  font-size: 0.92rem;
+  color: var(--muted-color);
+}
+.content {
+  padding: var(--content-padding);
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}

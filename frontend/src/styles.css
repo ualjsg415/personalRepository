@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #0f766e;
+  --secondary-color: #0b132b;
+  --accent-color: #dff6ff;
+  --shadow-color: rgba(11, 19, 43, 0.18);
+  --surface-color: #f8fbff;
+  --muted-color: #5b677f;
+}
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background:
+    radial-gradient(circle at 85% 5%, rgba(14, 165, 233, 0.22), transparent 40%),
+    radial-gradient(circle at 5% 95%, rgba(15, 118, 110, 0.2), transparent 45%),
+    #f2f7ff;
+  color: var(--secondary-color);
+  min-height: 100vh;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+button.primary {
+  padding: 10px 14px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+button.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.35);
+}
