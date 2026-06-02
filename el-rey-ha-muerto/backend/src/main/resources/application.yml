@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: el-rey-ha-muerto-backend
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/elrey_db}
+    username: ${SPRING_DATASOURCE_USERNAME:elrey_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:elrey_pass}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: 8080
+
+anthropic:
+  api-key: ${ANTHROPIC_API_KEY:}
+  model: claude-haiku-4-5-20251001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    com.elrey: DEBUG
+    org.springframework.web: INFO
