@@ -1,0 +1,28 @@
+<div class="stats-bar">
+  <div class="stats-bar__day">
+    <span class="day-label">DÍA</span>
+    <span class="day-number">{{ day }}</span>
+    <span class="day-label">/ 10</span>
+  </div>
+
+  <div class="stats-bar__stats">
+    @for (stat of statList; track stat.key) {
+      <div class="stat">
+        <span class="stat__icon">{{ stat.icon }}</span>
+        <div class="stat__bar-wrap pixel-border">
+          <div class="stat__bar"
+               [style.width.%]="stat.value"
+               [style.background]="barColor(stat.value)">
+          </div>
+        </div>
+        <span class="stat__value" [class.stat__value--danger]="stat.value <= 30">
+          {{ stat.value }}
+        </span>
+      </div>
+    }
+  </div>
+
+  <div class="stats-bar__name">
+    <span class="crown-sm">♛</span> {{ playerName }}
+  </div>
+</div>

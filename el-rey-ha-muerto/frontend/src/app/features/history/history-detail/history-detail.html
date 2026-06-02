@@ -1,0 +1,25 @@
+<div class="detail-page scanlines">
+  <div class="detail-page__header">
+    <button class="back-btn" (click)="goBack()">← Todas las partidas</button>
+    <h1 class="detail-page__title">Crónica de la Partida #{{ sessionId }}</h1>
+  </div>
+
+  <div class="detail-page__log">
+    @for (entry of mockLog; track entry.day) {
+      <div class="log-entry pixel-border--wood" [class.log-entry--death]="entry.death">
+        <div class="log-entry__day">DÍA {{ entry.day }}</div>
+        <div class="log-entry__content">
+          <p class="log-entry__event">{{ entry.event }}</p>
+          <p class="log-entry__choice">
+            Decisión: <span [class.log-entry__choice--hidden]="entry.hidden">
+              {{ entry.hidden ? '??? (decisión fatídica oculta)' : entry.choice }}
+            </span>
+          </p>
+          @if (entry.death) {
+            <p class="log-entry__death-msg">💀 {{ entry.death }}</p>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

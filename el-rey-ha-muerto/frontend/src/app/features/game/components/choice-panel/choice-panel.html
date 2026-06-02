@@ -1,0 +1,15 @@
+<div class="choice-panel">
+  @for (choice of choices; track choice.id) {
+    <button
+      class="tavern-sign pixel-border--wood"
+      [class.tavern-sign--disabled]="disabled"
+      (click)="select(choice)">
+      <span class="tavern-sign__nail tavern-sign__nail--tl"></span>
+      <span class="tavern-sign__nail tavern-sign__nail--tr"></span>
+      <span class="tavern-sign__label">{{ choice.label }}</span>
+      <span class="tavern-sign__text">{{ choice.text }}</span>
+      <span class="tavern-sign__nail tavern-sign__nail--bl"></span>
+      <span class="tavern-sign__nail tavern-sign__nail--br"></span>
+    </button>
+  }
+</div>

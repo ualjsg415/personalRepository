@@ -1,0 +1,52 @@
+<div class="game-page scanlines">
+
+  <!-- HUD superior: stats -->
+  <app-stats-bar
+    [stats]="state.stats"
+    [day]="state.day"
+    [playerName]="state.playerName">
+  </app-stats-bar>
+
+  <!-- Área de juego -->
+  <div class="game-page__arena">
+
+    <!-- Fondo de escenario -->
+    <app-scene-background [scene]="scene"></app-scene-background>
+
+    <!-- Sprite del rey centrado -->
+    <div class="game-page__king-area">
+      <app-king-sprite [mood]="kingMood"></app-king-sprite>
+    </div>
+
+    <!-- Panel inferior: narración + elecciones -->
+    <div class="game-page__bottom">
+      @if (state.currentEvent) {
+        <app-narrative-box
+          [title]="state.currentEvent.title"
+          [text]="state.currentEvent.description">
+        </app-narrative-box>
+
+        <app-choice-panel
+          [choices]="state.currentEvent.choices"
+          [disabled]="choosing"
+          (choiceMade)="onChoiceMade($event)">
+        </app-choice-panel>
+      }
+
+      @if (!state.isAlive) {
+        <div class="game-page__death pixel-border">
+          <div class="death__skull">💀</div>
+          <h2 class="death__title">El Rey ha Muerto</h2>
+          <p class="death__cause">{{ state.causeOfDeath }}</p>
+          <p class="death__days">Sobrevivió {{ state.day - 1 }} día{{ state.day !== 2 ? 's' : '' }}</p>
+          <button class="death__btn pixel-border" (click)="goBack()">
+            Volver al inicio
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Botón de escape -->
+  <button class="game-page__back" (click)="goBack()">← Salir</button>
+</div>

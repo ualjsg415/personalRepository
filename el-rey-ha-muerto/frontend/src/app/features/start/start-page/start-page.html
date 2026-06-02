@@ -1,0 +1,43 @@
+<div class="start-screen scanlines">
+
+  <div class="torches">
+    <div class="torch torch--left">
+      <div class="torch__flame"></div>
+      <div class="torch__body"></div>
+    </div>
+    <div class="torch torch--right">
+      <div class="torch__flame"></div>
+      <div class="torch__body"></div>
+    </div>
+  </div>
+
+  <div class="start-screen__content">
+    <div class="crown-icon">♛</div>
+    <h1 class="title">El Rey<br><span class="title--sub">ha Muerto</span></h1>
+    <p class="subtitle">¿Cuántos días sobrevivirá Su Majestad?</p>
+
+    <div class="name-section">
+      <label class="name-label">✦ Nombre del Rey ✦</label>
+      <input
+        class="name-input pixel-border"
+        type="text"
+        [(ngModel)]="playerName"
+        placeholder="Introduce tu nombre real..."
+        maxlength="20"
+      />
+    </div>
+
+    <div class="buttons">
+      <button class="btn-start pixel-border" (click)="startGame()" [disabled]="!playerName.trim()">
+        ⚔&nbsp;&nbsp;Comenzar a Reinar
+      </button>
+      <button class="btn-history pixel-border--wood" (click)="goToHistory()">
+        📜&nbsp;&nbsp;Archivo del Reino
+      </button>
+    </div>
+
+    <p class="hint">[ Sobrevive 10 días sin cometer ninguna estupidez real ]</p>
+  </div>
+
+  <div class="stone-floor"></div>
+</div>

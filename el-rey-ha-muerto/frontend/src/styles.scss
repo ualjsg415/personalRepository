@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=UnifrakturMaguntia&display=swap');
+
+:root {
+  --color-bg:           #0d0a0e;
+  --color-bg-mid:       #1a1220;
+  --color-stone:        #2c2535;
+  --color-stone-light:  #3d3348;
+  --color-gold:         #c9a84c;
+  --color-gold-bright:  #f0c94a;
+  --color-gold-dark:    #7a5f1e;
+  --color-wood:         #5c3d1e;
+  --color-wood-light:   #8b5e2e;
+  --color-wood-dark:    #3a2510;
+  --color-parchment:    #e8d5a3;
+  --color-ink:          #1e0e00;
+  --color-red:          #8b1a1a;
+  --color-red-bright:   #c0392b;
+  --color-green:        #1a5c2a;
+  --color-text:         #e8d5a3;
+  --color-text-dim:     #a08c5a;
+
+  --font-title: 'UnifrakturMaguntia', cursive;
+  --font-pixel: 'Press Start 2P', monospace;
+
+  --pixel: 4px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+  color: var(--color-text);
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.pixel-border {
+  border: var(--pixel) solid var(--color-gold-dark);
+  box-shadow:
+    0 0 0 var(--pixel) var(--color-bg),
+    0 0 0 calc(var(--pixel) * 2) var(--color-gold),
+    inset 0 0 0 var(--pixel) var(--color-gold-dark);
+}
+
+.pixel-border--wood {
+  border: var(--pixel) solid var(--color-wood-dark);
+  box-shadow:
+    0 0 0 var(--pixel) var(--color-bg),
+    0 0 0 calc(var(--pixel) * 2) var(--color-wood-light),
+    inset 0 0 0 var(--pixel) var(--color-wood-dark);
+}
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.12) 2px,
+    rgba(0,0,0,0.12) 4px
+  );
+  pointer-events: none;
+  z-index: 99;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.88; }
+  75%       { opacity: 0.94; }
+  87%       { opacity: 0.82; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
