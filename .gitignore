@@ -9,3 +9,8 @@ backend/target/
 .vscode/
 .idea/
 *.log
+
+# Claude Code internal
+skills-lock.json
+.claude/
+.agents/

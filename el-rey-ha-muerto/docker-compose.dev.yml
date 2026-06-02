@@ -1,0 +1,28 @@
+version: '3.8'
+
+# Entorno de desarrollo: solo levanta PostgreSQL
+# Uso: docker compose -f docker-compose.dev.yml up -d
+# El backend y frontend se arrancan localmente con Spring Boot y ng serve
+
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: elrey-postgres-dev
+    environment:
+      POSTGRES_DB: elrey_db
+      POSTGRES_USER: elrey_user
+      POSTGRES_PASSWORD: elrey_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U elrey_user -d elrey_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_dev_data:
