@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SessionDetail } from '../../../core/models/game.models';
+import { HistoryService } from '../../../core/services/history';
 
 @Component({
   selector: 'app-history-detail',
@@ -9,19 +11,26 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HistoryDetail implements OnInit {
   sessionId = 0;
+  detail: SessionDetail | null = null;
+  loading = true;
 
-  // Datos de prueba — se conectarán al backend
-  mockLog = [
-    { day: 1, event: 'La Mañana del Rey', choice: 'Usar la escobilla del váter', hidden: true },
-    { day: 2, event: 'El Desayuno Real',  choice: 'Comer las sobras del perro',  hidden: false },
-    { day: 3, event: 'La Audiencia',      choice: 'Ignorar al embajador',        hidden: false },
-    { day: 4, event: 'El Final',          choice: '—',                           hidden: false, death: 'Infección bucal por escobilla del váter' },
-  ];
-
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private historyService: HistoryService
+  ) {}
 
   ngOnInit() {
     this.sessionId = Number(this.route.snapshot.paramMap.get('id'));
+    this.historyService.getSessionDetail(this.sessionId).subscribe({
+      next: (detail) => {
+        this.detail = detail;
+        this.loading = false;
+      },
+      error: () => {
+        this.loading = false;
+      }
+    });
   }
 
   goBack() {

@@ -41,3 +41,20 @@ export interface GameSession {
   isAlive: boolean;
   causeOfDeath?: string;
 }
+
+export interface SessionChoiceLog {
+  day: number;
+  eventTitle: string;
+  choiceText: string;
+  hasHiddenFlag: boolean;
+  deathMessage: string | null;
+}
+
+export interface SessionDetail {
+  id: number;
+  playerName: string;
+  daysSurvived: number;
+  isAlive: boolean;
+  causeOfDeath: string | null;
+  log: SessionChoiceLog[];
+}

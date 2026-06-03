@@ -6,7 +6,13 @@
   </div>
 
   <div class="history-page__list">
-    @if (sessions.length === 0) {
+    @if (loading) {
+      <div class="empty-state pixel-border">
+        <p>Consultando los archivos del reino...</p>
+      </div>
+    }
+
+    @if (!loading && sessions.length === 0) {
       <div class="empty-state pixel-border">
         <p>Aún no hay partidas registradas.</p>
         <p>¡Sé el primer rey en fallecer!</p>

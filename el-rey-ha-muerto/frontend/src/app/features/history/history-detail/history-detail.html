@@ -1,25 +1,46 @@
 <div class="detail-page scanlines">
   <div class="detail-page__header">
     <button class="back-btn" (click)="goBack()">← Todas las partidas</button>
-    <h1 class="detail-page__title">Crónica de la Partida #{{ sessionId }}</h1>
+    @if (detail) {
+      <h1 class="detail-page__title">Crónica de {{ detail.playerName }}</h1>
+    } @else {
+      <h1 class="detail-page__title">Crónica de la Partida #{{ sessionId }}</h1>
+    }
   </div>
 
   <div class="detail-page__log">
-    @for (entry of mockLog; track entry.day) {
-      <div class="log-entry pixel-border--wood" [class.log-entry--death]="entry.death">
-        <div class="log-entry__day">DÍA {{ entry.day }}</div>
-        <div class="log-entry__content">
-          <p class="log-entry__event">{{ entry.event }}</p>
-          <p class="log-entry__choice">
-            Decisión: <span [class.log-entry__choice--hidden]="entry.hidden">
-              {{ entry.hidden ? '??? (decisión fatídica oculta)' : entry.choice }}
-            </span>
-          </p>
-          @if (entry.death) {
-            <p class="log-entry__death-msg">💀 {{ entry.death }}</p>
-          }
-        </div>
+
+    @if (loading) {
+      <div class="empty-state pixel-border">
+        <p>Consultando los archivos del reino...</p>
       </div>
     }
+
+    @if (!loading && detail) {
+      @for (entry of detail.log; track entry.day) {
+        <div class="log-entry pixel-border--wood" [class.log-entry--death]="entry.deathMessage">
+          <div class="log-entry__day">DÍA {{ entry.day }}</div>
+          <div class="log-entry__content">
+            <p class="log-entry__event">{{ entry.eventTitle }}</p>
+            <p class="log-entry__choice">
+              Decisión:
+              <span [class.log-entry__choice--hidden]="entry.hasHiddenFlag">
+                {{ entry.hasHiddenFlag ? '??? (decisión fatídica oculta)' : entry.choiceText }}
+              </span>
+            </p>
+            @if (entry.deathMessage) {
+              <p class="log-entry__death-msg">💀 {{ entry.deathMessage }}</p>
+            }
+          </div>
+        </div>
+      }
+    }
+
+    @if (!loading && !detail) {
+      <div class="empty-state pixel-border">
+        <p>No se encontró esta partida.</p>
+      </div>
+    }
+
   </div>
 </div>
