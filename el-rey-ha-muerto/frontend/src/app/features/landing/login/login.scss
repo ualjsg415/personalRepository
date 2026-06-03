@@ -1,4 +1,4 @@
-// ── Page (blurred castle background) ─────────────────────────────────────────
+// ── Page ──────────────────────────────────────────────────────────────────────
 .auth-page {
   position: relative;
   width: 100vw;
@@ -7,31 +7,62 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
-  background-image: url('/assets/backgrounds/castle-landscape.png');
-  background-size: cover;
-  background-position: center bottom;
   background-color: #6ab4d8;
 
-  &::before {
-    content: '';
+  &__bg {
     position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 22% 28%, rgba(255,240,60,0.5) 0%, transparent 14%),
-      linear-gradient(180deg, #4598c8 0%, #6ab4d8 30%, #90cce0 50%, #6ab840 70%, #387820 100%);
+    height: 100vh;
+    width: auto;
+    max-width: none;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    image-rendering: pixelated;
     z-index: 0;
+    user-select: none;
     pointer-events: none;
   }
 
+  // Velo oscuro + blur sobre el fondo
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(6px);
-    background: rgba(180, 200, 220, 0.15);
+    backdrop-filter: blur(4px);
+    background: rgba(10, 20, 40, 0.28);
     z-index: 1;
     pointer-events: none;
+  }
+
+  // Título Paper Crown: DETRÁS del velo blur (z-index 0 < z-index 1 del ::after)
+  &__brand {
+    position: absolute;
+    z-index: 0;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 400;
+    color: #d4a020;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-shadow:
+       3px  0   0 #1f0e00,
+      -3px  0   0 #1f0e00,
+       0    3px 0 #1f0e00,
+       0   -3px 0 #1f0e00,
+       3px  3px 0 #1f0e00,
+      -3px  3px 0 #1f0e00,
+       3px -3px 0 #1f0e00,
+      -3px -3px 0 #1f0e00,
+       5px  5px 0 rgba(0,0,0,0.45);
   }
 }
 
@@ -39,19 +70,44 @@
 .auth-card {
   position: relative;
   z-index: 2;
-  width: min(420px, 90vw);
-  background: #f5e6c8;
-  border: 2px solid #8b6914;
-  border-radius: 4px;
-  box-shadow:
-    0 8px 32px rgba(0,0,0,0.4),
-    inset 0 0 0 1px rgba(255,220,120,0.3);
-  padding: 28px 32px 24px;
+  width: min(340px, 84vw);
+  background: transparent;   // sin relleno — el pergamino es el único fondo
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  // Padding vertical para los rodillos (~13% de alto), horizontal para márgenes del rollo
+  padding: 72px 52px 76px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   animation: fadeIn 0.4s ease forwards;
+
+  // Imagen del pergamino: absolute, rellena el card, blanco eliminado con multiply
+  &__scroll {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scaleX(2.6) scaleY(2.8);
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  mix-blend-mode: multiply;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 0;
+}
+
+  // z-index: 1 en todos los hijos para quedar encima del pergamino (z-index: 0)
+  &__icon, &__title, &__sep, &__link {
+    position: relative;
+    z-index: 1;
+  }
 
   &__icon {
     width: 56px;
@@ -105,6 +161,8 @@
 
 // ── Form elements ──────────────────────────────────────────────────────────────
 .auth-form {
+  position: relative;
+  z-index: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
