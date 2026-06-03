@@ -1,63 +1,6 @@
-<div class="scene" [class]="'scene--' + scene">
-  <div class="scene__layer scene__layer--back"></div>
-  <div class="scene__layer scene__layer--mid"></div>
-  <div class="scene__layer scene__layer--fore"></div>
-
-  @if (scene === 'bedroom') {
-    <div class="scene__detail bed">
-      <div class="bed__frame"></div>
-      <div class="bed__pillow"></div>
-      <div class="bed__cover"></div>
-    </div>
-    <div class="scene__detail window">
-      <div class="window__glass"></div>
-      <div class="window__cross"></div>
-      <div class="window__glow"></div>
-    </div>
-  }
-
-  @if (scene === 'throne-room') {
-    <div class="scene__detail throne">
-      <div class="throne__back"></div>
-      <div class="throne__seat"></div>
-      <div class="throne__arm throne__arm--left"></div>
-      <div class="throne__arm throne__arm--right"></div>
-      <div class="throne__crown-ornament">♛</div>
-    </div>
-    <div class="scene__detail banner banner--left">▲</div>
-    <div class="scene__detail banner banner--right">▲</div>
-  }
-
-  @if (scene === 'dining-hall') {
-    <div class="scene__detail table">
-      <div class="table__top"></div>
-      <div class="table__leg table__leg--left"></div>
-      <div class="table__leg table__leg--right"></div>
-      <div class="table__food">🍗</div>
-      <div class="table__food table__food--2">🍷</div>
-    </div>
-  }
-
-  @if (scene === 'gardens') {
-    <div class="scene__detail tree tree--1"></div>
-    <div class="scene__detail tree tree--2"></div>
-    <div class="scene__detail bush bush--1"></div>
-    <div class="scene__detail bush bush--2"></div>
-    <div class="scene__detail flower flower--1">✿</div>
-    <div class="scene__detail flower flower--2">✿</div>
-  }
-
-  @if (scene === 'dungeon') {
-    <div class="scene__detail chains chains--left"></div>
-    <div class="scene__detail chains chains--right"></div>
-    <div class="scene__detail torch-wall torch-wall--left">
-      <div class="torch-wall__flame"></div>
-    </div>
-    <div class="scene__detail torch-wall torch-wall--right">
-      <div class="torch-wall__flame"></div>
-    </div>
-    <div class="scene__detail bars"></div>
-  }
-
+<div class="scene">
+  <div class="scene__bg"
+       [style.background-image]="'url(assets/backgrounds/' + scene + '.png)'">
+  </div>
   <div class="scene__vignette"></div>
 </div>
