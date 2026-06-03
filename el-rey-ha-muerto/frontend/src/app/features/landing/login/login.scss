@@ -1,0 +1,168 @@
+// ── Page (blurred castle background) ─────────────────────────────────────────
+.auth-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background-image: url('/assets/backgrounds/castle-landscape.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-color: #6ab4d8;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 22% 28%, rgba(255,240,60,0.5) 0%, transparent 14%),
+      linear-gradient(180deg, #4598c8 0%, #6ab4d8 30%, #90cce0 50%, #6ab840 70%, #387820 100%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    background: rgba(180, 200, 220, 0.15);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+// ── Parchment card ─────────────────────────────────────────────────────────────
+.auth-card {
+  position: relative;
+  z-index: 2;
+  width: min(420px, 90vw);
+  background: #f5e6c8;
+  border: 2px solid #8b6914;
+  border-radius: 4px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 0 0 1px rgba(255,220,120,0.3);
+  padding: 28px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: fadeIn 0.4s ease forwards;
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d4a830 0%, #8b6200 100%);
+    border: 3px solid #f0c840;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  &__title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(22px, 4vw, 28px);
+    font-weight: 700;
+    color: #3d2800;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  &__sep {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #c8a060;
+    margin: 4px 0;
+
+    &--dashed {
+      border-top: 1px dashed #c8a060;
+    }
+  }
+
+  &__link {
+    font-family: var(--font-pixel);
+    font-size: 7px;
+    color: #6b5000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+    padding: 4px 0;
+    text-align: center;
+
+    &:hover { color: #3d2800; }
+  }
+}
+
+// ── Form elements ──────────────────────────────────────────────────────────────
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: #6b5000;
+  letter-spacing: 1px;
+}
+
+.form-input {
+  background: #fdf8ee;
+  border: 1px solid #c8a060;
+  border-radius: 3px;
+  padding: 12px 14px;
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: #3d2800;
+  outline: none;
+  width: 100%;
+  letter-spacing: 1px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &::placeholder { color: #a09060; }
+
+  &:focus {
+    border-color: #8b6914;
+    box-shadow: 0 0 0 2px rgba(139,105,20,0.2);
+  }
+}
+
+// ── Submit button ──────────────────────────────────────────────────────────────
+.auth-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(180deg, #6b5200 0%, #4a3800 100%);
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(13px, 2vw, 16px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 3px;
+  border-bottom: 3px solid #2e2200;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+  margin-top: 4px;
+
+  &:hover:not(:disabled) { transform: translateY(-1px); filter: brightness(1.15); }
+  &:active:not(:disabled) { transform: translateY(1px); border-bottom-width: 1px; }
+  &:disabled { opacity: 0.45; cursor: not-allowed; }
+}

@@ -1,0 +1,49 @@
+<div class="auth-page">
+
+  <div class="auth-card">
+
+    <div class="auth-card__icon">🏰</div>
+    <h1 class="auth-card__title">Identifícate,<br>Majestad</h1>
+    <hr class="auth-card__sep" />
+
+    <div class="auth-form">
+
+      <div class="form-group">
+        <label class="form-label">✉ Correo Real</label>
+        <input
+          class="form-input"
+          type="email"
+          [(ngModel)]="email"
+          placeholder="tu&#64;reino.com"
+          autocomplete="username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">🔒 Palabra Secreta</label>
+        <input
+          class="form-input"
+          type="password"
+          [(ngModel)]="password"
+          placeholder="••••••••"
+          autocomplete="current-password"
+        />
+      </div>
+
+      <button
+        class="auth-btn"
+        (click)="login()"
+        [disabled]="!email.trim() || !password.trim()">
+        Entrar al Reino →
+      </button>
+
+    </div>
+
+    <hr class="auth-card__sep auth-card__sep--dashed" />
+    <button class="auth-card__link" (click)="goForgotPassword()">
+      ¿Olvidaste tu corona? (Recuperar contraseña)
+    </button>
+
+  </div>
+
+</div>

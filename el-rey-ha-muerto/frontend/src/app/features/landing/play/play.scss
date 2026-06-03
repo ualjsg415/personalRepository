@@ -1,0 +1,79 @@
+// Fondo que rellena los laterales cuando la imagen no llena el ancho
+.play-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #7ec8e3; // azul cielo que coincide con la imagen
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Imagen: siempre ocupa el 100% de la altura → se ve completa
+  &__bg {
+    position: absolute;
+    height: 100vh;
+    width: auto;           // ancho proporcional (nunca se distorsiona)
+    max-width: none;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    image-rendering: pixelated;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  // Overlay del mismo tamaño que la imagen mostrada
+  // aspect-ratio 2/3 coincide con una imagen portrait de 896x1344
+  &__overlay {
+    position: absolute;
+    height: 100vh;
+    aspect-ratio: 2 / 3;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    // El botón va en el recuadro del banner (≈17–20% desde arriba)
+    padding-top: 7%;
+  }
+}
+
+// ── Botón pergamino ────────────────────────────────────────────────────────────
+.play-screen__jugar {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(12px, 1.8vh, 18px);
+  font-weight: bold;
+  color: #2c3e50;
+  background: #f5dfbb;
+  padding: 12px 36px;
+  border: 4px solid #472d1a;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  letter-spacing: 2px;
+  image-rendering: auto;
+  box-shadow:
+    inset 0  4px 0 #d2b48c,
+    inset 0 -4px 0 rgba(0,0,0,0.15),
+    4px 4px 0 rgba(0,0,0,0.35);
+
+  // Rollos de pergamino
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    width: 6px;
+    height: calc(100% + 8px);
+    background: #472d1a;
+  }
+  &::before { left: -10px;  box-shadow: -4px 0 0 #d2b48c; }
+  &::after  { right: -10px; box-shadow:  4px 0 0 #d2b48c; }
+
+  &:hover  { transform: scale(1.04); transition: transform 0.1s ease; }
+  &:active { transform: scale(0.96); }
+}

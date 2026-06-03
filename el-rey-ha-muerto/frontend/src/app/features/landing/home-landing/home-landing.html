@@ -1,0 +1,31 @@
+<div class="home-screen">
+
+  <img class="home-screen__bg" src="/assets/backgrounds/castle-landscape.png" alt="" />
+  <div class="home-screen__dim" aria-hidden="true"></div>
+
+  <!-- Título dentro del recuadro del banner -->
+  <header class="home-screen__brand">
+    <h1 class="home-screen__title">Paper Crown</h1>
+  </header>
+
+  <!-- Cartel de madera (imagen PNG) con botones superpuestos -->
+  <div class="board">
+    <img class="board__img" src="/assets/backgrounds/board.png" alt="Cartel de madera" />
+
+    <!-- Placa superior izquierda → Iniciar Sesión -->
+    <button class="board__btn board__btn--1" (click)="play()">
+      INICIAR<br>SESIÓN
+    </button>
+
+    <!-- Placa derecha centro → Registrarse -->
+    <button class="board__btn board__btn--2" (click)="goToRegister()">
+      REGISTRARSE
+    </button>
+
+    <!-- Placa inferior grande → Archivos Reales -->
+    <button class="board__btn board__btn--3" (click)="history()">
+      ARCHIVOS<br>REALES
+    </button>
+  </div>
+
+</div>

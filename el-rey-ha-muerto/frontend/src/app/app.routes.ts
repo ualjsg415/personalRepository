@@ -1,11 +1,31 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'start', pathMatch: 'full' },
+  { path: '', redirectTo: 'play', pathMatch: 'full' },
   {
-    path: 'start',
-    loadComponent: () => import('./features/start/start-page/start-page')
-      .then(m => m.StartPage)
+    path: 'play',
+    loadComponent: () => import('./features/landing/play/play')
+      .then(m => m.PlayPage)
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./features/landing/home-landing/home-landing')
+      .then(m => m.HomeLanding)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./features/landing/login/login')
+      .then(m => m.LoginPage)
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./features/landing/register/register')
+      .then(m => m.RegisterPage)
+  },
+  {
+    path: 'forget-password',
+    loadComponent: () => import('./features/landing/forget-password/forget-password')
+      .then(m => m.ForgetPasswordPage)
   },
   {
     path: 'game',
@@ -22,5 +42,5 @@ export const routes: Routes = [
     loadComponent: () => import('./features/history/history-detail/history-detail')
       .then(m => m.HistoryDetail)
   },
-  { path: '**', redirectTo: 'start' }
+  { path: '**', redirectTo: 'play' }
 ];
