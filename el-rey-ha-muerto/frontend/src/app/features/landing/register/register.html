@@ -1,16 +1,45 @@
 <div class="auth-page">
 
+  <!-- Fondo portrait completo -->
+  <img class="auth-page__bg" src="/assets/backgrounds/castle-landscape.png" alt="" />
+
+  <!-- Título en el banner de lanzas (difuminado, z-index 0) -->
+  <header class="auth-page__brand">
+    <h1 class="auth-page__title">Paper Crown</h1>
+  </header>
+
   <div class="auth-card">
 
-    <div class="auth-card__header">NUEVO LINAJE REAL</div>
+    <!-- Pergamino como fondo del card -->
+    <img class="auth-card__scroll" src="/assets/backgrounds/parchment.png" alt="" />
 
-    <div class="auth-card__icon">🏰</div>
-    <p class="auth-card__sub">Forge your destiny in Paper Crown.</p>
+    <!-- Corona pixel-art estilo sello/marca -->
+    <svg class="crown-stamp" viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="#7a4a10">
+        <rect x="1" y="0" width="1" height="1"/>
+        <rect x="4" y="0" width="1" height="1"/>
+        <rect x="7" y="0" width="1" height="1"/>
+        <rect x="0" y="1" width="2" height="1"/>
+        <rect x="3" y="1" width="3" height="1"/>
+        <rect x="7" y="1" width="2" height="1"/>
+        <rect x="0" y="2" width="9" height="1"/>
+        <rect x="0" y="3" width="3" height="1"/>
+        <rect x="6" y="3" width="3" height="1"/>
+        <rect x="0" y="4" width="9" height="1"/>
+        <rect x="1" y="5" width="7" height="1"/>
+      </g>
+      <rect x="4" y="3" width="1" height="1" fill="#d4a020"/>
+      <rect x="3" y="3" width="1" height="1" fill="#a07018" opacity="0.7"/>
+      <rect x="5" y="3" width="1" height="1" fill="#a07018" opacity="0.7"/>
+    </svg>
+
+    <h1 class="auth-card__title">Únete,<br>Soberano</h1>
+    <hr class="auth-card__sep" />
 
     <div class="auth-form">
 
       <div class="form-group">
-        <label class="form-label">🏛 NOMBRE DEL SOBERANO</label>
+        <label class="form-label"> Nombre del Soberano</label>
         <input
           class="form-input"
           type="text"
@@ -22,7 +51,7 @@
       </div>
 
       <div class="form-group">
-        <label class="form-label">✉ CORREO REAL</label>
+        <label class="form-label"> Correo Real</label>
         <input
           class="form-input"
           type="email"
@@ -33,29 +62,47 @@
       </div>
 
       <div class="form-group">
-        <label class="form-label">🔑 PALABRA SECRETA</label>
-        <input
-          class="form-input"
-          type="password"
-          [(ngModel)]="password"
-          placeholder="••••••••"
-          autocomplete="new-password"
-        />
+        <label class="form-label"> Palabra Secreta</label>
+        <div class="form-input-wrap">
+          <input
+            class="form-input"
+            [type]="showPassword ? 'text' : 'password'"
+            [(ngModel)]="password"
+            placeholder="••••••••"
+            autocomplete="new-password"
+          />
+          <button type="button" class="form-eye" (click)="togglePassword()" [attr.aria-label]="showPassword ? 'Ocultar' : 'Mostrar'">
+            @if (!showPassword) {
+              <svg class="form-eye__svg" viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M0.5 5 C3 0.5 5.5 0 8 0 C10.5 0 13 0.5 15.5 5 C13 9.5 10.5 10 8 10 C5.5 10 3 9.5 0.5 5z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="8" cy="5" r="2.6" fill="currentColor"/>
+                <circle cx="7" cy="4" r="0.8" fill="white" opacity="0.65"/>
+              </svg>
+            } @else {
+              <svg class="form-eye__svg" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M0.5 6 C3 1.5 5.5 1 8 1 C10.5 1 13 1.5 15.5 6 C13 10.5 10.5 11 8 11 C5.5 11 3 10.5 0.5 6z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="8" cy="6" r="2.6" fill="currentColor"/>
+                <circle cx="7" cy="5" r="0.8" fill="white" opacity="0.65"/>
+                <line x1="2" y1="1" x2="14" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            }
+          </button>
+        </div>
       </div>
 
       <button
         class="auth-btn"
         (click)="register()"
         [disabled]="!name.trim() || !email.trim() || !password.trim()">
-        🏰 Fundar Reino
+        Fundar Reino →
       </button>
 
     </div>
 
-    <p class="auth-card__foot">
+    <hr class="auth-card__sep auth-card__sep--dashed" />
+    <button class="auth-card__link" (click)="goLogin()">
       ¿Ya tienes un reino?
-      <button class="auth-card__link-inline" (click)="goLogin()">Iniciar Sesión</button>
-    </p>
+    </button>
 
   </div>
 

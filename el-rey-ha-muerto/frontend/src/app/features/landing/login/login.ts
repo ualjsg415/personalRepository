@@ -9,10 +9,13 @@ import { Router } from '@angular/router';
   styleUrl: './login.scss',
 })
 export class LoginPage {
-  email    = '';
-  password = '';
+  email        = '';
+  password     = '';
+  showPassword = false;
 
   constructor(private router: Router) {}
+
+  togglePassword() { this.showPassword = !this.showPassword; }
 
   login() {
     if (!this.email.trim() || !this.password.trim()) return;

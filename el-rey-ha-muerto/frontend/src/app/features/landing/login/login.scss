@@ -80,7 +80,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   animation: fadeIn 0.4s ease forwards;
 
   // Imagen del pergamino: absolute, rellena el card, blanco eliminado con multiply
@@ -103,28 +103,15 @@
   z-index: 0;
 }
 
-  // z-index: 1 en todos los hijos para quedar encima del pergamino (z-index: 0)
-  &__icon, &__title, &__sep, &__link {
+  // z-index: 1 en todos los hijos para quedar encima del pergamino
+  &__title, &__sep, &__link {
     position: relative;
     z-index: 1;
   }
 
-  &__icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #d4a830 0%, #8b6200 100%);
-    border: 3px solid #f0c840;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  }
-
   &__title {
     font-family: 'Cinzel', serif;
-    font-size: clamp(22px, 4vw, 28px);
+    font-size: clamp(18px, 3.5vw, 24px);
     font-weight: 700;
     color: #3d2800;
     text-align: center;
@@ -138,25 +125,36 @@
     border-top: 1px solid #c8a060;
     margin: 4px 0;
 
-    &--dashed {
-      border-top: 1px dashed #c8a060;
-    }
+    &--dashed { border-top: 1px dashed #c8a060; }
   }
 
   &__link {
     font-family: var(--font-pixel);
     font-size: 7px;
-    color: #6b5000;
+    color: #5a1a00;        // marrón oscuro contrastado sobre pergamino
     background: none;
     border: none;
     cursor: pointer;
     letter-spacing: 0.5px;
     text-decoration: underline;
+    text-decoration-color: #8b3a00;
     padding: 4px 0;
     text-align: center;
 
-    &:hover { color: #3d2800; }
+    &:hover { color: #1f0800; }
   }
+}
+
+// ── Corona pixel-art (sello/marca) ────────────────────────────────────────────
+.crown-stamp {
+  position: relative;
+  z-index: 1;
+  width: 90px;   // 9 píxeles × 10px cada uno
+  height: 60px;  // 6 píxeles × 10px
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  opacity: 0.88;
+  filter: drop-shadow(1px 1px 0 rgba(60,30,0,0.3));
 }
 
 // ── Form elements ──────────────────────────────────────────────────────────────
@@ -182,11 +180,17 @@
   letter-spacing: 1px;
 }
 
+// Wrapper para input + botón ojo
+.form-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
 .form-input {
   background: #fdf8ee;
   border: 1px solid #c8a060;
   border-radius: 3px;
-  padding: 12px 14px;
+  padding: 12px 36px 12px 14px; // espacio derecho para el ojo
   font-family: var(--font-pixel);
   font-size: 8px;
   color: #3d2800;
@@ -200,6 +204,32 @@
   &:focus {
     border-color: #8b6914;
     box-shadow: 0 0 0 2px rgba(139,105,20,0.2);
+  }
+}
+
+// ── Botón ojo (mostrar/ocultar contraseña) ─────────────────────────────────────
+.form-eye {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #8b6014;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: color 0.1s;
+
+  &:hover { color: #3d2800; }
+
+  &__svg {
+    display: block;
+    width: 18px;
+    height: 14px;
   }
 }
 

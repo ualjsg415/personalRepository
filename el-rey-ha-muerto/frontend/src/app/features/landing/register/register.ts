@@ -13,8 +13,11 @@ export class RegisterPage {
   email           = '';
   password        = '';
   confirmPassword = '';
+  showPassword    = false;
 
   constructor(private router: Router) {}
+
+  togglePassword() { this.showPassword = !this.showPassword; }
 
   register() {
     if (!this.name.trim() || !this.email.trim() || !this.password.trim()) return;

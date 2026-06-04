@@ -6,32 +6,63 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden auto;
-
-  background-image: url('/assets/backgrounds/castle-landscape.png');
-  background-size: cover;
-  background-position: center bottom;
+  overflow: hidden;
   background-color: #6ab4d8;
 
-  &::before {
-    content: '';
+  &__bg {
     position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 22% 28%, rgba(255,240,60,0.5) 0%, transparent 14%),
-      linear-gradient(180deg, #4598c8 0%, #6ab4d8 30%, #90cce0 50%, #6ab840 70%, #387820 100%);
+    height: 100vh;
+    width: auto;
+    max-width: none;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    image-rendering: pixelated;
     z-index: 0;
+    user-select: none;
     pointer-events: none;
   }
 
+  // Velo oscuro + blur sobre el fondo
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(6px);
-    background: rgba(180, 200, 220, 0.15);
+    backdrop-filter: blur(4px);
+    background: rgba(10, 20, 40, 0.28);
     z-index: 1;
     pointer-events: none;
+  }
+
+  // Título Paper Crown: DETRÁS del velo blur (z-index 0 < z-index 1 del ::after)
+  &__brand {
+    position: absolute;
+    z-index: 0;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 400;
+    color: #d4a020;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-shadow:
+       3px  0   0 #1f0e00,
+      -3px  0   0 #1f0e00,
+       0    3px 0 #1f0e00,
+       0   -3px 0 #1f0e00,
+       3px  3px 0 #1f0e00,
+      -3px  3px 0 #1f0e00,
+       3px -3px 0 #1f0e00,
+      -3px -3px 0 #1f0e00,
+       5px  5px 0 rgba(0,0,0,0.45);
   }
 }
 
@@ -39,78 +70,93 @@
 .auth-card {
   position: relative;
   z-index: 2;
-  width: min(420px, 90vw);
-  background: #f5e6c8;
-  border: 2px solid #8b6914;
-  border-radius: 4px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  width: min(340px, 84vw);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 72px 52px 76px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  overflow: hidden;
+  gap: 6px;
   animation: fadeIn 0.4s ease forwards;
 
-  &__header {
+  &__scroll {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(2.6) scaleY(3);
     width: 100%;
-    background: linear-gradient(180deg, #d4a830 0%, #a07810 100%);
-    color: #3d2800;
-    font-family: var(--font-pixel);
-    font-size: clamp(7px, 1.5vw, 10px);
-    letter-spacing: 2px;
-    text-align: center;
-    padding: 14px 8px;
-    border-bottom: 2px solid #7a5800;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    image-rendering: pixelated;
+    pointer-events: none;
+    z-index: 0;
   }
 
-  &__icon {
-    font-size: 28px;
-    line-height: 1;
-    margin-top: 4px;
+  &__title, &__sep, &__link {
+    position: relative;
+    z-index: 1;
   }
 
-  &__sub {
+  &__title {
     font-family: 'Cinzel', serif;
-    font-size: clamp(11px, 1.8vw, 13px);
-    color: #5a4200;
-    font-style: italic;
-    text-align: center;
-    padding: 0 20px;
-    line-height: 1.5;
-  }
-
-  &__foot {
-    font-family: var(--font-pixel);
-    font-size: 7px;
-    color: #6b5000;
-    text-align: center;
-    padding: 14px 0 18px;
-    letter-spacing: 0.5px;
-  }
-
-  &__link-inline {
-    font-family: var(--font-pixel);
-    font-size: 7px;
-    color: #3d2800;
+    font-size: clamp(18px, 3.5vw, 24px);
     font-weight: 700;
+    color: #3d2800;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  &__sep {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #c8a060;
+    margin: 4px 0;
+
+    &--dashed { border-top: 1px dashed #c8a060; }
+  }
+
+  &__link {
+    font-family: var(--font-pixel);
+    font-size: 7px;
+    color: #5a1a00;
     background: none;
     border: none;
     cursor: pointer;
-    text-decoration: underline;
     letter-spacing: 0.5px;
-    padding: 0;
+    text-decoration: underline;
+    text-decoration-color: #8b3a00;
+    padding: 4px 0;
+    text-align: center;
 
-    &:hover { color: #6b5000; }
+    &:hover { color: #1f0800; }
   }
 }
 
-// ── Form ───────────────────────────────────────────────────────────────────────
+// ── Corona pixel-art ──────────────────────────────────────────────────────────
+.crown-stamp {
+  position: relative;
+  z-index: 1;
+  width: 90px;
+  height: 60px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  opacity: 0.88;
+  filter: drop-shadow(1px 1px 0 rgba(60,30,0,0.3));
+}
+
+// ── Form elements ──────────────────────────────────────────────────────────────
 .auth-form {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  padding: 0 28px 8px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .form-group {
@@ -121,16 +167,21 @@
 
 .form-label {
   font-family: var(--font-pixel);
-  font-size: 6px;
+  font-size: 7px;
   color: #6b5000;
   letter-spacing: 1px;
+}
+
+.form-input-wrap {
+  position: relative;
+  width: 100%;
 }
 
 .form-input {
   background: #fdf8ee;
   border: 1px solid #c8a060;
   border-radius: 3px;
-  padding: 11px 14px;
+  padding: 12px 36px 12px 14px;
   font-family: var(--font-pixel);
   font-size: 8px;
   color: #3d2800;
@@ -147,13 +198,40 @@
   }
 }
 
+// ── Botón ojo ─────────────────────────────────────────────────────────────────
+.form-eye {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #8b6014;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: color 0.1s;
+
+  &:hover { color: #3d2800; }
+
+  &__svg {
+    display: block;
+    width: 18px;
+    height: 14px;
+  }
+}
+
+// ── Submit button ──────────────────────────────────────────────────────────────
 .auth-btn {
   width: 100%;
-  padding: 14px;
+  padding: 15px;
   background: linear-gradient(180deg, #6b5200 0%, #4a3800 100%);
   color: #fff;
   font-family: 'Cinzel', serif;
-  font-size: clamp(13px, 2vw, 15px);
+  font-size: clamp(13px, 2vw, 16px);
   font-weight: 700;
   letter-spacing: 1px;
   border: none;
