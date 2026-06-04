@@ -1,38 +1,79 @@
-<div class="history-page scanlines">
-  <div class="history-page__header">
-    <button class="back-btn" (click)="goBack()"> Volver</button>
-    <h1 class="history-page__title">📜 Archivo del Reino</h1>
-    <p class="history-page__subtitle">Los reyes que fueron... y los que no duraron</p>
-  </div>
+<div class="book-scene">
 
-  <div class="history-page__list">
-    @if (loading) {
-      <div class="empty-state pixel-border">
-        <p>Consultando los archivos del reino...</p>
-      </div>
-    }
+  <!-- Fondo: biblioteca medieval con velas — cubre toda la pantalla -->
+  <img class="book-scene__bg" src="/assets/backgrounds/background-history-list.png" alt="" />
 
-    @if (!loading && sessions.length === 0) {
-      <div class="empty-state pixel-border">
-        <p>Aún no hay partidas registradas.</p>
-        <p>¡Sé el primer rey en fallecer!</p>
-      </div>
-    }
+  <!-- Libro + contenido superpuesto calibrado a las páginas -->
+  <div class="book-wrapper">
 
-    @for (session of sessions; track session.id) {
-      <div class="session-card pixel-border--wood" (click)="openDetail(session.id)">
-        <div class="session-card__status" [class.session-card__status--alive]="session.isAlive">
-          {{ session.isAlive ? '👑 VIVO' : '💀 MUERTO' }}
+    <img class="book-img"
+         src="/assets/backgrounds/history-book.png"
+         alt="Libro de Archivos del Reino" />
+
+    <!-- Overlay calibrado a las páginas de pergamino del libro -->
+    <div class="pages-overlay">
+
+      <!-- ── Página izquierda: título y navegación ───────────────────── -->
+      <div class="page-content left-page">
+
+        <button class="back-btn" (click)="goBack()">← Volver</button>
+
+        <div class="page-title-block">
+          <div class="pixel-divider"></div>
+          <h1 class="pixel-header">Archivo<br>del Reino</h1>
+          <div class="pixel-divider"></div>
+          <p class="page-subtitle">
+            Los reyes que fueron...<br>y los que no duraron
+          </p>
         </div>
-        <div class="session-card__info">
-          <h3 class="session-card__name">Rey {{ session.playerName }}</h3>
-          <p class="session-card__days">Sobrevivió {{ session.daysSurvived }} día{{ session.daysSurvived !== 1 ? 's' : '' }}</p>
-          @if (session.causeOfDeath) {
-            <p class="session-card__death">† {{ session.causeOfDeath }}</p>
+
+        <span class="page-num">— I —</span>
+
+      </div>
+
+      <!-- ── Página derecha: lista de partidas ───────────────────────── -->
+      <div class="page-content right-page">
+
+        @if (loading) {
+          <div class="book-empty">
+            <p>Consultando los archivos del reino...</p>
+          </div>
+        }
+
+        @if (!loading && sessions.length === 0) {
+          <div class="book-empty">
+            <p>Aún no hay partidas registradas.</p>
+            <p>¡Sé el primer rey en fallecer!</p>
+          </div>
+        }
+
+        <div class="book-list">
+          @for (session of sessions; track session.id) {
+            <div class="book-entry" (click)="openDetail(session.id)">
+              <div class="book-entry__status"
+                   [class.book-entry__status--alive]="session.isAlive">
+                {{ session.isAlive ? '👑 VIVO' : '💀 MUERTO' }}
+              </div>
+              <div class="book-entry__info">
+                <h3 class="book-entry__name">Rey {{ session.playerName }}</h3>
+                <p class="book-entry__days">
+                  Sobrevivió {{ session.daysSurvived }} día{{ session.daysSurvived !== 1 ? 's' : '' }}
+                </p>
+                @if (session.causeOfDeath) {
+                  <p class="book-entry__death">† {{ session.causeOfDeath }}</p>
+                }
+              </div>
+              <div class="book-entry__arrow">›</div>
+            </div>
           }
         </div>
-        <div class="session-card__arrow">›</div>
+
+        <span class="page-num page-num--right">— II —</span>
+
       </div>
-    }
-  </div>
+
+    </div><!-- /pages-overlay -->
+
+  </div><!-- /book-wrapper -->
+
 </div>
