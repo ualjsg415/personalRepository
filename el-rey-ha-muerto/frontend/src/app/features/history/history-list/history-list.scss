@@ -19,8 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0e0b06;     // fallback mientras carga la imagen
-  font-family: 'Bricolage Grotesque', sans-serif;
+  background-color: #0e0b06;
+  font-family: 'Courier Prime', serif;
 }
 
 // Fondo full-screen
@@ -29,7 +29,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;             // cubre toda la pantalla sin deformar
+  object-fit: cover;
   object-position: center center;
   image-rendering: pixelated;
   z-index: 0;
@@ -43,9 +43,7 @@
 .book-wrapper {
   position: relative;
   z-index: 1;
-  // Ancho: 84% del viewport o máx 860px — altura se calcula automáticamente
   width: min(92vw, 1100px);
-  // Sombra profunda para levantar el libro sobre la escena
   filter:
     drop-shadow(0 28px 56px rgba(0,0,0,0.80))
     drop-shadow(0 6px 14px rgba(0,0,0,0.55));
@@ -71,10 +69,10 @@
 // pages-overlay — capa de contenido calibrada sobre las páginas del libro
 //
 // Calibración (porcentajes sobre la imagen del libro):
-//   top: 9%   → arriba de las páginas (debajo del lomo superior)
-//   left: 9%  → borde izquierdo de la página izquierda
-//   right: 14% → margen derecho (espacio para broches + cubierta)
-//   bottom: 11% → arriba del lomo inferior
+//   top: 9%    → arriba de las páginas
+//   left: 9%   → borde izquierdo de la página izquierda
+//   right: 14% → margen derecho (broches + cubierta)
+//   bottom: 11%→ lomo inferior
 // ─────────────────────────────────────────────────────────────────────────────
 .pages-overlay {
   position: absolute;
@@ -83,54 +81,57 @@
   right: 14%;
   bottom: 11%;
   display: flex;
-  gap: 7%;          // porcentaje del overlay = lomo central del libro
+  gap: 7%;
   pointer-events: none;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// page-content — cada página (fondo transparente, el libro da la textura)
+// page-content — cada página con márgenes de manuscrito
 // ─────────────────────────────────────────────────────────────────────────────
 .page-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   pointer-events: all;
-  // Sin background ni border — la imagen del libro provee el pergamino
   background: transparent;
   overflow: hidden;
   min-width: 0;
+  padding: 5% 7%;
 }
 
 // Página derecha: permite scroll cuando hay muchos reyes
 .right-page {
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(140,115,86,0.4) transparent;
+  scrollbar-color: rgba(140,115,86,0.35) transparent;
 
   &::-webkit-scrollbar       { width: 3px; }
   &::-webkit-scrollbar-track { background: transparent; }
-  &::-webkit-scrollbar-thumb { background: rgba(140,115,86,0.5); border-radius: 2px; }
+  &::-webkit-scrollbar-thumb { background: rgba(140,115,86,0.45); border-radius: 2px; }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Botón volver
+// Botón volver — anotación marginal en cursiva
 // ─────────────────────────────────────────────────────────────────────────────
 .back-btn {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(8px, 0.9vw, 10px);
-  font-weight: 700;
-  color: #6b4c20;
+  font-family: 'Courier Prime', serif;
+  font-style: italic;
+  font-size: clamp(8px, 0.85vw, 10px);
+  font-weight: 400;
+  color: #7a5530;
   background: none;
   border: none;
   cursor: pointer;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   padding: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   flex-shrink: 0;
   align-self: flex-start;
-  transition: color 0.1s;
+  opacity: 0.75;
+  transition: color 0.15s, opacity 0.15s;
+  padding-top: 30px;
 
-  &:hover { color: #2c241a; }
+  &:hover { color: #2c241a; opacity: 1; }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -142,97 +143,122 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-align: center;
+  padding-bottom: 110%;
 }
 
-// pixel-header (clase del código recibido)
+// Cabecera de capítulo — tipografía Fraktur de manuscrito medieval
 .pixel-header {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: clamp(16px, 2.6vw, 28px);
-  font-weight: 800;
-  color: var(--hbl-on-surface);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.15;
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: clamp(24px, 3.2vw, 42px);
+  font-weight: 400;
+  color: #2c241a;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
   margin: 0;
-  // Sombra pixel-art sin blur (del código recibido: "2px 2px 0px rgba(0,0,0,0.1)")
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.10);
+  text-shadow: 1px 2px 0 rgba(60,30,0,0.10);
 }
 
 .page-subtitle {
   font-family: 'Courier Prime', serif;
-  font-size: clamp(10px, 1.2vw, 13px);
+  font-size: clamp(9px, 1.05vw, 12px);
   font-style: italic;
-  color: #5a4230;
-  line-height: 1.65;
+  color: #6b5240;
+  line-height: 1.7;
   margin: 0;
 }
 
-// Divisor pixel-art ████░░░░ (High-Bit Heraldry)
+// Divisor de manuscrito — línea de tinta degradada
 .pixel-divider {
-  width: 80%;
-  height: 4px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--hbl-outline) 0px,  var(--hbl-outline) 4px,
-    #d0c5af            4px,  #d0c5af            8px
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #8c7356 20%,
+    #c8a060 50%,
+    #8c7356 80%,
+    transparent 100%
   );
+  opacity: 0.5;
+  flex-shrink: 0;
 }
 
 // Número de página
 .page-num {
   font-family: 'Courier Prime', serif;
-  font-size: clamp(9px, 1vw, 11px);
+  font-size: clamp(8px, 0.9vw, 10px);
   font-style: italic;
   color: #8c7356;
   text-align: center;
   flex-shrink: 0;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
+  opacity: 0.65;
+  padding-bottom: 40px;
+
+  &--right { text-align: right; }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Lista de partidas — página derecha
+// Lista de partidas — crónica numerada con numerales romanos
 // ─────────────────────────────────────────────────────────────────────────────
 .book-list {
   flex: 1;
   display: flex;
   flex-direction: column;
+  counter-reset: chronicle;
 }
 
 .book-entry {
+  counter-increment: chronicle;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 4px;
+  gap: 7px;
+  padding: 7px 2px;
   cursor: pointer;
-  border-bottom: 1px solid rgba(140,115,86,0.28);
+  border-bottom: 1px solid rgba(140,115,86,0.20);
   transition: background 0.1s steps(2), transform 0.08s;
 
-  &:first-child { border-top: 1px solid rgba(140,115,86,0.28); }
+  &:first-child { border-top: 1px solid rgba(140,115,86,0.20); }
 
   &:hover {
-    background: rgba(212,175,55,0.10);
-    transform: translateX(3px);
+    background: rgba(212,175,55,0.07);
+    transform: translateX(2px);
+  }
+
+  // Numeral romano en el margen izquierdo
+  &::before {
+    content: counter(chronicle, upper-roman);
+    font-family: 'Courier Prime', serif;
+    font-style: italic;
+    font-size: clamp(6px, 0.62vw, 8px);
+    color: #a08060;
+    flex-shrink: 0;
+    width: 16px;
+    text-align: right;
+    align-self: center;
+    opacity: 0.65;
   }
 
   &__status {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: clamp(6px, 0.7vw, 8px);
-    font-weight: 700;
+    font-family: 'Courier Prime', serif;
+    font-style: italic;
+    font-size: clamp(6px, 0.6vw, 7px);
+    font-weight: 400;
     color: #9e1a1a;
-    min-width: 60px;
+    min-width: 50px;
     text-align: center;
-    background: rgba(158,26,26,0.07);
-    border: 1px solid rgba(158,26,26,0.18);
+    background: rgba(158,26,26,0.06);
+    border: 1px solid rgba(158,26,26,0.14);
     border-radius: 2px;
     padding: 2px 3px;
     flex-shrink: 0;
 
     &--alive {
       color: #215e2a;
-      background: rgba(33,94,42,0.07);
-      border-color: rgba(33,94,42,0.18);
+      background: rgba(33,94,42,0.06);
+      border-color: rgba(33,94,42,0.14);
     }
   }
 
@@ -242,8 +268,8 @@
   }
 
   &__name {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: clamp(11px, 1.4vw, 15px);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(10px, 1.2vw, 13px);
     font-weight: 700;
     color: var(--hbl-on-surface);
     white-space: nowrap;
@@ -254,24 +280,26 @@
 
   &__days {
     font-family: 'Courier Prime', serif;
-    font-size: clamp(9px, 0.9vw, 11px);
-    color: #5a4230;
+    font-size: clamp(8px, 0.82vw, 10px);
+    color: #6b5240;
     margin: 1px 0 0;
   }
 
   &__death {
     font-family: 'Courier Prime', serif;
-    font-size: clamp(8px, 0.85vw, 10px);
+    font-size: clamp(7px, 0.78vw, 9px);
     font-style: italic;
     color: #9e1a1a;
     margin: 1px 0 0;
+    opacity: 0.82;
   }
 
   &__arrow {
-    font-size: clamp(14px, 1.5vw, 18px);
+    font-size: clamp(12px, 1.3vw, 15px);
     color: #b8a080;
     flex-shrink: 0;
     line-height: 1;
+    opacity: 0.55;
   }
 }
 
@@ -284,15 +312,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   text-align: center;
 
   p {
     font-family: 'Courier Prime', serif;
-    font-size: clamp(10px, 1.1vw, 13px);
+    font-size: clamp(9px, 1vw, 12px);
     font-style: italic;
-    color: #5a4230;
+    color: #6b5240;
     line-height: 1.8;
     margin: 0;
+    opacity: 0.82;
   }
 }

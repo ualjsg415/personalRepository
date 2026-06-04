@@ -19,5 +19,5 @@ export class ForgetPasswordPage {
     this.sent = true;
   }
 
-  goBack() { this.router.navigate(['/login']); }
+  goBack() { this.router.navigate(['/home']); }
 }

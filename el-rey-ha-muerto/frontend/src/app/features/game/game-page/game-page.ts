@@ -26,7 +26,7 @@ export class GamePage implements OnInit {
     if (nav?.gameState) {
       this.state = nav.gameState;
     } else {
-      this.router.navigate(['/start']);
+      this.router.navigate(['/login']);
     }
   }
 
@@ -58,7 +58,7 @@ export class GamePage implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/start']);
+    this.router.navigate(['/home']);
   }
 
   goToHistory() {

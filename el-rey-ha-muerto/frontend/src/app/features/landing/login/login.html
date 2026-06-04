@@ -79,11 +79,15 @@
         </div>
       </div>
 
+      @if (error) {
+        <p class="form-error">{{ error }}</p>
+      }
+
       <button
         class="auth-btn"
         (click)="login()"
-        [disabled]="!email.trim() || !password.trim()">
-        Entrar al Reino →
+        [disabled]="loading || !email.trim() || !password.trim()">
+        {{ loading ? 'Entrando...' : 'Entrar al Reino →' }}
       </button>
 
     </div>

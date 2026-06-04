@@ -1,5 +1,13 @@
 -- Esquema completo de "El Rey ha Muerto" v2
 
+CREATE TABLE IF NOT EXISTS users (
+    id            BIGSERIAL     PRIMARY KEY,
+    username      VARCHAR(50)   UNIQUE NOT NULL,
+    email         VARCHAR(255)  UNIQUE NOT NULL,
+    password_hash VARCHAR(255)  NOT NULL,
+    created_at    TIMESTAMP     NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE IF NOT EXISTS game_sessions (
     id             BIGSERIAL    PRIMARY KEY,
     player_name    VARCHAR(50)  NOT NULL,

@@ -233,6 +233,30 @@
   }
 }
 
+// ── Error message ─────────────────────────────────────────────────────────────
+@keyframes errorShake {
+  0%   { transform: translateX(0); }
+  15%  { transform: translateX(-6px); }
+  30%  { transform: translateX(6px); }
+  45%  { transform: translateX(-4px); }
+  60%  { transform: translateX(4px); }
+  75%  { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.form-error {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: #c0100f;
+  text-align: center;
+  margin: -4px 0 0;
+  letter-spacing: 0.3px;
+  line-height: 1.8;
+  animation: errorShake 0.4s ease;
+}
+
 // ── Submit button ──────────────────────────────────────────────────────────────
 .auth-btn {
   width: 100%;
