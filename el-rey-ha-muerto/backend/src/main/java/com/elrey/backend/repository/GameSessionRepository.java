@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface GameSessionRepository extends JpaRepository<GameSession, Long> {
     List<GameSession> findAllByOrderByStartedAtDesc();
+    List<GameSession> findAllByEndedAtIsNotNullOrderByStartedAtAsc();
 }

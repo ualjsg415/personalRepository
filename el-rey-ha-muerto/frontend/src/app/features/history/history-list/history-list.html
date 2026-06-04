@@ -13,7 +13,7 @@
     <!-- Overlay calibrado a las páginas de pergamino del libro -->
     <div class="pages-overlay">
 
-      <!-- ── Página izquierda: título y navegación ───────────────────── -->
+      <!-- ── Página izquierda: título y paginación ───────────────────── -->
       <div class="page-content left-page">
 
         <button class="back-btn" (click)="goBack()"> Volver al Castillo</button>
@@ -27,7 +27,20 @@
           </p>
         </div>
 
-        <span class="page-num">— I —</span>
+        <!-- Controles de paginación -->
+        @if (!loading && totalPages > 1) {
+          <div class="page-nav">
+            <button class="page-nav__btn"
+                    (click)="prevPage()"
+                    [disabled]="page === 1">‹</button>
+            <span class="page-nav__info">{{ page }} / {{ totalPages }}</span>
+            <button class="page-nav__btn"
+                    (click)="nextPage()"
+                    [disabled]="page === totalPages">›</button>
+          </div>
+        }
+
+        <span class="page-num">— {{ page }} —</span>
 
       </div>
 
@@ -47,28 +60,26 @@
           </div>
         }
 
-        <div class="book-list">
-          @for (session of sessions; track session.id) {
+        <!-- counter-start via CSS custom property para numerales correctos -->
+        <div class="book-list" [style.--counter-start]="counterStart">
+          @for (session of pagedSessions; track session.id) {
             <div class="book-entry" (click)="openDetail(session.id)">
               <div class="book-entry__status"
                    [class.book-entry__status--alive]="session.isAlive">
-                {{ session.isAlive ? '👑 VIVO' : '💀 MUERTO' }}
+                {{ session.isAlive ? '👑' : '💀' }}
               </div>
               <div class="book-entry__info">
                 <h3 class="book-entry__name">Rey {{ session.playerName }}</h3>
                 <p class="book-entry__days">
-                  Sobrevivió {{ session.daysSurvived }} día{{ session.daysSurvived !== 1 ? 's' : '' }}
+                  {{ session.isAlive ? 'Sobrevivió' : 'Murió el día' }} {{ session.daysSurvived }}
                 </p>
-                @if (session.causeOfDeath) {
-                  <p class="book-entry__death">† {{ session.causeOfDeath }}</p>
-                }
               </div>
               <div class="book-entry__arrow">›</div>
             </div>
           }
         </div>
 
-        <span class="page-num page-num--right">— II —</span>
+        <span class="page-num page-num--right">— {{ page }} —</span>
 
       </div>
 

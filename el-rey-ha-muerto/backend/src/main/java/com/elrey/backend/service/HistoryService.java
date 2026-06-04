@@ -21,7 +21,7 @@ public class HistoryService {
     private final SessionChoiceRepository sessionChoiceRepo;
 
     public List<SessionSummaryDto> getAllSessions() {
-        return sessionRepo.findAllByOrderByStartedAtDesc().stream()
+        return sessionRepo.findAllByEndedAtIsNotNullOrderByStartedAtAsc().stream()
                 .map(this::toSummary)
                 .toList();
     }

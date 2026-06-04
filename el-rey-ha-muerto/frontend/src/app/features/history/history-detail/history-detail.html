@@ -1,46 +1,116 @@
-<div class="detail-page scanlines">
-  <div class="detail-page__header">
-    <button class="back-btn" (click)="goBack()">← Todas las partidas</button>
-    @if (detail) {
-      <h1 class="detail-page__title">Crónica de {{ detail.playerName }}</h1>
-    } @else {
-      <h1 class="detail-page__title">Crónica de la Partida #{{ sessionId }}</h1>
-    }
-  </div>
+<div class="chronicle-scene">
 
-  <div class="detail-page__log">
+  <!-- Fondo biblioteca medieval con velas -->
+  <img class="chronicle-scene__bg" src="/assets/backgrounds/background-history-list.png" alt="" />
+  <div class="chronicle-scene__veil"></div>
+
+  <!-- Pergamino principal scrollable -->
+  <div class="scroll-wrapper">
+
+    <!-- Botón volver -->
+    <button class="back-btn" (click)="goBack()">← Volver al Archivo</button>
 
     @if (loading) {
-      <div class="empty-state pixel-border">
-        <p>Consultando los archivos del reino...</p>
+      <div class="scroll-loading">
+        <p>Consultando los pergaminos del reino...</p>
+      </div>
+    }
+
+    @if (!loading && !detail) {
+      <div class="scroll-loading">
+        <p>Esta crónica se ha perdido en el tiempo.</p>
       </div>
     }
 
     @if (!loading && detail) {
-      @for (entry of detail.log; track entry.day) {
-        <div class="log-entry pixel-border--wood" [class.log-entry--death]="entry.deathMessage">
-          <div class="log-entry__day">DÍA {{ entry.day }}</div>
-          <div class="log-entry__content">
-            <p class="log-entry__event">{{ entry.eventTitle }}</p>
-            <p class="log-entry__choice">
-              Decisión:
-              <span [class.log-entry__choice--hidden]="entry.hasHiddenFlag">
-                {{ entry.hasHiddenFlag ? '??? (decisión fatídica oculta)' : entry.choiceText }}
-              </span>
-            </p>
-            @if (entry.deathMessage) {
-              <p class="log-entry__death-msg">💀 {{ entry.deathMessage }}</p>
-            }
-          </div>
+
+      <!-- ── Cabecera: corona + nombre + destino ──────────────────── -->
+      <header class="scroll-header">
+        <svg class="scroll-header__crown" viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="#7a4a10">
+            <rect x="1" y="0" width="1" height="1"/>
+            <rect x="4" y="0" width="1" height="1"/>
+            <rect x="7" y="0" width="1" height="1"/>
+            <rect x="0" y="1" width="2" height="1"/>
+            <rect x="3" y="1" width="3" height="1"/>
+            <rect x="7" y="1" width="2" height="1"/>
+            <rect x="0" y="2" width="9" height="1"/>
+            <rect x="0" y="3" width="3" height="1"/>
+            <rect x="6" y="3" width="3" height="1"/>
+            <rect x="0" y="4" width="9" height="1"/>
+            <rect x="1" y="5" width="7" height="1"/>
+          </g>
+          <rect x="4" y="3" width="1" height="1" fill="#d4a020"/>
+        </svg>
+
+        <p class="scroll-header__eyebrow">Crónica Real</p>
+        <h1 class="scroll-header__name">Rey {{ detail.playerName }}</h1>
+
+        <div class="scroll-header__divider">
+          <span class="scroll-header__divider-line"></span>
+          <span class="scroll-header__divider-gem">✦</span>
+          <span class="scroll-header__divider-line"></span>
         </div>
-      }
-    }
 
-    @if (!loading && !detail) {
-      <div class="empty-state pixel-border">
-        <p>No se encontró esta partida.</p>
+        <!-- Resultado de la partida -->
+        @if (detail.isAlive) {
+          <div class="fate-badge fate-badge--survived">
+            <span class="fate-badge__icon">👑</span>
+            <span class="fate-badge__text">Sobrevivió {{ detail.daysSurvived }} días</span>
+          </div>
+          <p class="fate-message fate-message--survived">
+            "El rey resistió las pruebas del reino y pasó a los libros de historia."
+          </p>
+        } @else {
+          <div class="fate-badge fate-badge--dead">
+            <span class="fate-badge__icon">💀</span>
+            <span class="fate-badge__text">Murió el día {{ detail.daysSurvived }}</span>
+          </div>
+          @if (detail.causeOfDeath) {
+            <p class="fate-message fate-message--dead">† {{ detail.causeOfDeath }}</p>
+          }
+        }
+      </header>
+
+      <!-- ── Separador ornamental ─────────────────────────────────── -->
+      <div class="ornament-sep">
+        <span>❧</span>
+        <span class="ornament-sep__label">Diario de Decisiones</span>
+        <span>❧</span>
       </div>
+
+      <!-- ── Entradas del diario ──────────────────────────────────── -->
+      <div class="chronicle-log">
+        @for (entry of detail.log; track entry.day) {
+          @if (entry.eventTitle !== 'Fin del Reinado') {
+            <div class="chronicle-entry" [class.chronicle-entry--fatal]="entry.hasHiddenFlag">
+              <div class="chronicle-entry__day">{{ toRoman(entry.day) }}</div>
+              <div class="chronicle-entry__body">
+                <h3 class="chronicle-entry__event">{{ entry.eventTitle }}</h3>
+                <p class="chronicle-entry__choice">
+                  @if (entry.hasHiddenFlag) {
+                    <span class="fatal-mark">⚠ Decisión Fatídica —</span>
+                  }
+                  {{ entry.choiceText }}
+                </p>
+              </div>
+            </div>
+          }
+        }
+      </div>
+
+      <!-- ── Sello final ──────────────────────────────────────────── -->
+      <footer class="scroll-footer">
+        <div class="scroll-footer__seal">✦</div>
+        <p class="scroll-footer__text">
+          {{ detail.isAlive
+            ? 'Que su nombre perdure en los Archivos del Reino por siempre.'
+            : 'Que los dioses juzguen su reinado con clemencia.' }}
+        </p>
+      </footer>
+
     }
 
-  </div>
+  </div><!-- /scroll-wrapper -->
+
 </div>

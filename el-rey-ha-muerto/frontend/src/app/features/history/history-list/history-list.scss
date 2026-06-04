@@ -207,15 +207,16 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  counter-reset: chronicle;
+  counter-reset: chronicle var(--counter-start, 0);
+  padding-top: 8%;
 }
 
 .book-entry {
   counter-increment: chronicle;
   display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 7px 2px;
+  gap: 8px;
+  padding: 8px 2px;
   cursor: pointer;
   border-bottom: 1px solid rgba(140,115,86,0.20);
   transition: background 0.1s steps(2), transform 0.08s;
@@ -232,34 +233,19 @@
     content: counter(chronicle, upper-roman);
     font-family: 'Courier Prime', serif;
     font-style: italic;
-    font-size: clamp(6px, 0.62vw, 8px);
-    color: #a08060;
+    font-size: clamp(8px, 0.8vw, 10px);
+    color: #7a5c3a;
     flex-shrink: 0;
-    width: 16px;
+    width: 18px;
     text-align: right;
     align-self: center;
-    opacity: 0.65;
+    opacity: 0.80;
   }
 
   &__status {
-    font-family: 'Courier Prime', serif;
-    font-style: italic;
-    font-size: clamp(6px, 0.6vw, 7px);
-    font-weight: 400;
-    color: #9e1a1a;
-    min-width: 50px;
-    text-align: center;
-    background: rgba(158,26,26,0.06);
-    border: 1px solid rgba(158,26,26,0.14);
-    border-radius: 2px;
-    padding: 2px 3px;
+    font-size: clamp(11px, 1.1vw, 14px);
     flex-shrink: 0;
-
-    &--alive {
-      color: #215e2a;
-      background: rgba(33,94,42,0.06);
-      border-color: rgba(33,94,42,0.14);
-    }
+    line-height: 1;
   }
 
   &__info {
@@ -269,37 +255,66 @@
 
   &__name {
     font-family: 'Cinzel', serif;
-    font-size: clamp(10px, 1.2vw, 13px);
+    font-size: clamp(12px, 1.4vw, 16px);
     font-weight: 700;
-    color: var(--hbl-on-surface);
+    color: #2c1a08;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
+    letter-spacing: 0.02em;
   }
 
   &__days {
     font-family: 'Courier Prime', serif;
-    font-size: clamp(8px, 0.82vw, 10px);
-    color: #6b5240;
-    margin: 1px 0 0;
-  }
-
-  &__death {
-    font-family: 'Courier Prime', serif;
-    font-size: clamp(7px, 0.78vw, 9px);
+    font-size: clamp(9px, 0.9vw, 11px);
+    color: #5a3e28;
+    margin: 2px 0 0;
     font-style: italic;
-    color: #9e1a1a;
-    margin: 1px 0 0;
-    opacity: 0.82;
   }
 
   &__arrow {
-    font-size: clamp(12px, 1.3vw, 15px);
-    color: #b8a080;
+    font-size: clamp(13px, 1.4vw, 16px);
+    color: #8b6840;
     flex-shrink: 0;
     line-height: 1;
-    opacity: 0.55;
+    opacity: 0.70;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Controles de paginación — página izquierda
+// ─────────────────────────────────────────────────────────────────────────────
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 10px;
+
+  &__btn {
+    font-family: 'Courier Prime', serif;
+    font-size: clamp(14px, 1.5vw, 18px);
+    color: #7a5530;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 6px;
+    line-height: 1;
+    opacity: 0.75;
+    transition: color 0.12s, opacity 0.12s;
+
+    &:hover:not(:disabled) { color: #2c1a04; opacity: 1; }
+    &:disabled             { opacity: 0.25; cursor: default; }
+  }
+
+  &__info {
+    font-family: 'Courier Prime', serif;
+    font-style: italic;
+    font-size: clamp(8px, 0.85vw, 10px);
+    color: #6b5030;
+    opacity: 0.80;
+    letter-spacing: 0.05em;
   }
 }
 
