@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { StatsBar } from '../components/stats-bar/stats-bar';
 import { SceneBackground } from '../components/scene-background/scene-background';
@@ -19,7 +19,11 @@ export class GamePage implements OnInit {
   kingMood: KingMood = 'idle';
   choosing = false;
 
-  constructor(private router: Router, private gameService: GameService) {}
+  constructor(
+    private router: Router,
+    private gameService: GameService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     const nav = history.state;
@@ -39,6 +43,11 @@ export class GamePage implements OnInit {
     return this.state.isAlive ? this.state.day : this.state.day - 1;
   }
 
+  get isEndgame(): boolean {
+    if (!this.state) return false;
+    return !this.state.isAlive || (this.state.isAlive && !this.state.currentEvent);
+  }
+
   onChoiceMade(choice: Choice) {
     if (this.choosing || !this.state) return;
     this.choosing = true;
@@ -47,12 +56,20 @@ export class GamePage implements OnInit {
     this.gameService.makeChoice(this.state.sessionId, choice.id).subscribe({
       next: (newState) => {
         this.state = newState;
-        this.kingMood = newState.isAlive ? 'idle' : 'dead';
+        if (!newState.isAlive) {
+          this.kingMood = 'dead';
+        } else if (!newState.currentEvent) {
+          this.kingMood = 'happy';
+        } else {
+          this.kingMood = 'idle';
+        }
         this.choosing = false;
+        this.cdr.detectChanges();
       },
       error: () => {
         this.kingMood = 'idle';
         this.choosing = false;
+        this.cdr.detectChanges();
       }
     });
   }

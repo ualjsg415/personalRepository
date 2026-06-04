@@ -15,7 +15,7 @@
       <app-scene-background [scene]="scene"></app-scene-background>
 
       <!-- Sprite del rey centrado -->
-      <div class="game-page__king-area">
+      <div class="game-page__king-area" [class.game-page__king-area--endgame]="isEndgame">
         <app-king-sprite [mood]="kingMood"></app-king-sprite>
       </div>
 
@@ -36,32 +36,34 @@
         }
 
         @if (!state.isAlive) {
-          <div class="game-page__death pixel-border">
-            <div class="death__skull">💀</div>
-            <h2 class="death__title">El Rey ha Muerto</h2>
-            <p class="death__cause">{{ state.causeOfDeath }}</p>
-            <p class="death__days">Sobrevivió {{ daysSurvived }} día{{ daysSurvived !== 1 ? 's' : '' }}</p>
-            <button class="death__btn pixel-border" (click)="goToHistory()">
-              Ver historial
-            </button>
-            <button class="death__btn pixel-border" (click)="goBack()">
-              Volver al inicio
-            </button>
+          <div class="game-page__endgame game-page__endgame--dead pixel-border">
+            <h2 class="endgame__title endgame__title--dead">El Rey ha Muerto</h2>
+            <p class="endgame__cause">{{ state.causeOfDeath }}</p>
+            <p class="endgame__days">{{ daysSurvived }} día{{ daysSurvived !== 1 ? 's' : '' }} de reinado</p>
+            <div class="endgame__btns">
+              <button class="endgame__btn endgame__btn--secondary pixel-border" (click)="goToHistory()">
+                📜 Ver historial
+              </button>
+              <button class="endgame__btn pixel-border" (click)="goBack()">
+                🏰 Volver al inicio
+              </button>
+            </div>
           </div>
         }
 
         @if (state.isAlive && !state.currentEvent) {
-          <div class="game-page__death pixel-border">
-            <div class="death__skull">👑</div>
-            <h2 class="death__title">¡Has Sobrevivido!</h2>
-            <p class="death__cause">{{ state.narratorMessage }}</p>
-            <p class="death__days">Reinaste los 10 días. El reino está (sorprendentemente) intacto.</p>
-            <button class="death__btn pixel-border" (click)="goToHistory()">
-              Ver historial
-            </button>
-            <button class="death__btn pixel-border" (click)="goBack()">
-              Volver al inicio
-            </button>
+          <div class="game-page__endgame game-page__endgame--victory pixel-border">
+            <h2 class="endgame__title endgame__title--victory">¡Has Sobrevivido!</h2>
+            <p class="endgame__cause">{{ state.narratorMessage }}</p>
+            <p class="endgame__days">Reinaste los 10 días con honor</p>
+            <div class="endgame__btns">
+              <button class="endgame__btn endgame__btn--secondary pixel-border" (click)="goToHistory()">
+                📜 Ver historial
+              </button>
+              <button class="endgame__btn pixel-border" (click)="goBack()">
+                🏰 Volver al inicio
+              </button>
+            </div>
           </div>
         }
 
