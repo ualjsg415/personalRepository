@@ -32,6 +32,6 @@ export class HistoryList implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/start']);
+    this.router.navigate(['/home']);
   }
 }
