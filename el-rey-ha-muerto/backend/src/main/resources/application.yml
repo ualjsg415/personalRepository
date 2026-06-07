@@ -1,6 +1,8 @@
 spring:
   application:
     name: el-rey-ha-muerto-backend
+  config:
+    import: optional:classpath:application-local.yml
 
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/elrey_db}
