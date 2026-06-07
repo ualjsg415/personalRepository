@@ -69,6 +69,47 @@
   }
 }
 
+// ── Medallón "Cómo Jugar" — botón círculo con ! pixel art ─────────────────────
+.htp-coin {
+  position: absolute;
+  z-index: 10;
+  bottom: 9%;
+  left: 3.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.12s, filter 0.12s;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.08);
+    filter: brightness(1.2) drop-shadow(0 4px 8px rgba(200,160,20,0.5));
+  }
+
+  &:active { transform: translateY(0) scale(1); }
+
+  &__svg {
+    width: clamp(42px, 5vw, 58px);
+    height: clamp(42px, 5vw, 58px);
+    image-rendering: pixelated;
+    display: block;
+    filter: drop-shadow(0 3px 0 rgba(0,0,0,0.6)) drop-shadow(0 1px 0 #3a1a04);
+  }
+
+  &__label {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(5px, 0.65vw, 7px);
+    color: #f5dfa0;
+    text-shadow: 1px 1px 0 #1a0800, 2px 2px 0 rgba(0,0,0,0.4);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+}
+
 // ── Board: imagen PNG + botones superpuestos ───────────────────────────────────
 .board {
   position: absolute;

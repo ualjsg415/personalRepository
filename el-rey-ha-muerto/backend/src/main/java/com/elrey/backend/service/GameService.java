@@ -40,8 +40,7 @@ public class GameService {
                 .build();
         stats = statsRepo.save(stats);
 
-        GameEvent event = eventRepo.findFirstByDayTarget(1)
-                .orElseThrow(() -> new IllegalStateException("No hay evento para el día 1"));
+        GameEvent event = findEventForDay(1);
 
         return buildState(session, stats, event,
                 "El primer día de tu glorioso reinado ha comenzado. ¡Que los dioses te acompañen!");
@@ -58,8 +57,7 @@ public class GameService {
             return buildState(session, stats, null, session.getCauseOfDeath());
         }
 
-        GameEvent event = eventRepo.findFirstByDayTarget(stats.getDay())
-                .orElseThrow(() -> new IllegalStateException("No hay evento para el día " + stats.getDay()));
+        GameEvent event = findEventForDay(stats.getDay());
         return buildState(session, stats, event, narratorFor(stats.getDay()));
     }
 
@@ -141,13 +139,17 @@ public class GameService {
         session.setDaysSurvived(nextDay);
         sessionRepo.save(session);
 
-        GameEvent nextEvent = eventRepo.findFirstByDayTarget(nextDay)
-                .orElseThrow(() -> new IllegalStateException("No hay evento para el día " + nextDay));
-
-        return buildState(session, next, nextEvent, narratorFor(nextDay));
+        return buildState(session, next, findEventForDay(nextDay), narratorFor(nextDay));
     }
 
     // ── Helpers privados ──────────────────────────────────────────────────────
+
+    private GameEvent findEventForDay(int day) {
+        // Siempre usa el ai_generated más reciente; cae al manual si no hay ninguno
+        return eventRepo.findFirstByDayTargetAndSourceOrderByScrapedAtDesc(day, "ai_generated")
+                .orElseGet(() -> eventRepo.findFirstByDayTarget(day)
+                        .orElseThrow(() -> new IllegalStateException("No hay evento para el día " + day)));
+    }
 
     private GameStateDto endGame(GameSession session, KingStats stats, String deathMsg) {
         session.setIsAlive(false);

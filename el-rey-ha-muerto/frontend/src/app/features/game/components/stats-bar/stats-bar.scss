@@ -45,11 +45,13 @@
   line-height: 1;
 }
 
+// ── Stat individual ───────────────────────────────────────────────────────────
 .stat {
   display: flex;
   align-items: center;
   gap: 6px;
   flex: 1;
+  position: relative; // necesario para delta absoluto
 
   &__icon  { font-size: 16px; line-height: 1; }
 
@@ -64,8 +66,16 @@
 
   &__bar {
     height: 100%;
-    transition: width 0.5s ease, background 0.5s ease;
+    transition: width 0.65s cubic-bezier(0.4, 0, 0.2, 1), background 0.5s ease;
     image-rendering: pixelated;
+  }
+
+  // Overlay de drenaje — animación "barre" la barra hacia la izquierda
+  &__drain-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(192,16,15,0.25) 100%);
+    animation: drainPulse 0.5s ease-in-out infinite alternate;
   }
 
   &__value {
@@ -80,6 +90,62 @@
       animation: blink 1s step-end infinite;
     }
   }
+
+  // ── Indicador flotante de cambio ──────────────────────────────────────────
+  &__delta {
+    position: absolute;
+    right: -4px;
+    top: -2px;
+    font-family: var(--font-pixel);
+    font-size: 8px;
+    font-weight: 700;
+    pointer-events: none;
+    white-space: nowrap;
+    animation: deltaFloat 1.8s ease forwards;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.8);
+    z-index: 10;
+
+    &--up   { color: #4cdb6e; }
+    &--down { color: #e04040; }
+  }
+
+  // ── Estado de stat mortal ──────────────────────────────────────────────────
+  &--dying {
+    .stat__icon  { animation: deathShake 0.35s ease-in-out 2; }
+    .stat__value { color: #e04040 !important; animation: blink 0.4s step-end infinite; }
+    .stat__bar-wrap {
+      animation: deathGlow 0.4s ease-in-out infinite alternate;
+      border-color: #8b1a1a !important;
+    }
+  }
 }
 
-.crown-sm { color: var(--color-gold-bright); }
+// ── Keyframes ─────────────────────────────────────────────────────────────────
+
+@keyframes deltaFloat {
+  0%   { opacity: 1;   transform: translateY(0)    scale(1); }
+  15%  { opacity: 1;   transform: translateY(-6px)  scale(1.15); }
+  80%  { opacity: 0.7; transform: translateY(-22px) scale(1); }
+  100% { opacity: 0;   transform: translateY(-32px) scale(0.85); }
+}
+
+@keyframes drainPulse {
+  from { opacity: 0.4; }
+  to   { opacity: 1; }
+}
+
+@keyframes deathGlow {
+  from { box-shadow: 0 0 0 0 rgba(192,16,15,0);   }
+  to   { box-shadow: 0 0 8px 2px rgba(192,16,15,0.7); }
+}
+
+@keyframes deathShake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-3px); }
+  75%       { transform: translateX(3px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}

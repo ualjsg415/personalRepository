@@ -7,17 +7,32 @@
 
   <div class="stats-bar__stats">
     @for (stat of statList; track stat.key) {
-      <div class="stat">
+      <div class="stat" [class.stat--dying]="deathStat === stat.key">
         <span class="stat__icon">{{ stat.icon }}</span>
+
         <div class="stat__bar-wrap pixel-border">
           <div class="stat__bar"
                [style.width.%]="stat.value"
                [style.background]="barColor(stat.value)">
           </div>
+          <!-- Overlay que drena al 0 cuando es la stat mortal -->
+          @if (deathStat === stat.key) {
+            <div class="stat__drain-overlay"></div>
+          }
         </div>
+
         <span class="stat__value" [class.stat__value--danger]="stat.value <= 30">
           {{ stat.value }}
         </span>
+
+        <!-- Indicador flotante de cambio -->
+        @if (deltas[stat.key]) {
+          <span class="stat__delta"
+                [class.stat__delta--up]="deltas[stat.key] > 0"
+                [class.stat__delta--down]="deltas[stat.key] < 0">
+            {{ deltas[stat.key] > 0 ? '+' : '' }}{{ deltas[stat.key] }}
+          </span>
+        }
       </div>
     }
   </div>

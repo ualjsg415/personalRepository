@@ -1,0 +1,146 @@
+<div class="htp-overlay" (click)="close()">
+  <div class="htp-board" (click)="$event.stopPropagation()">
+
+    <!-- Clavos en las 4 esquinas del tablón (SVG pixel art) -->
+    <svg class="htp-nail htp-nail--tl" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+      <rect x="2" y="0" width="6" height="2" fill="#c9a84c"/>
+      <rect x="0" y="2" width="10" height="6" fill="#d4af4c"/>
+      <rect x="2" y="8" width="6" height="2" fill="#8b6020"/>
+      <rect x="1" y="1" width="2" height="2" fill="#f0d060"/>
+    </svg>
+    <svg class="htp-nail htp-nail--tr" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+      <rect x="2" y="0" width="6" height="2" fill="#c9a84c"/>
+      <rect x="0" y="2" width="10" height="6" fill="#d4af4c"/>
+      <rect x="2" y="8" width="6" height="2" fill="#8b6020"/>
+      <rect x="1" y="1" width="2" height="2" fill="#f0d060"/>
+    </svg>
+    <svg class="htp-nail htp-nail--bl" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+      <rect x="2" y="0" width="6" height="2" fill="#c9a84c"/>
+      <rect x="0" y="2" width="10" height="6" fill="#d4af4c"/>
+      <rect x="2" y="8" width="6" height="2" fill="#8b6020"/>
+      <rect x="1" y="1" width="2" height="2" fill="#f0d060"/>
+    </svg>
+    <svg class="htp-nail htp-nail--br" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+      <rect x="2" y="0" width="6" height="2" fill="#c9a84c"/>
+      <rect x="0" y="2" width="10" height="6" fill="#d4af4c"/>
+      <rect x="2" y="8" width="6" height="2" fill="#8b6020"/>
+      <rect x="1" y="1" width="2" height="2" fill="#f0d060"/>
+    </svg>
+
+    <!-- Botón cerrar (X pintado en el tablón) -->
+    <button class="htp-close" (click)="close()" aria-label="Cerrar">✕</button>
+
+    <!-- ── CABECERA DEL TABLÓN ───────────────────────────────────────────────── -->
+    <div class="htp-header">
+      <!-- Corona pixel art SVG -->
+      <svg class="htp-crown" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+        <rect x="2"  y="0"  width="2" height="4" fill="#f0c94a"/>
+        <rect x="8"  y="0"  width="2" height="6" fill="#f0c94a"/>
+        <rect x="14" y="0"  width="2" height="4" fill="#f0c94a"/>
+        <rect x="0"  y="4"  width="18" height="2" fill="#c9a84c"/>
+        <rect x="0"  y="6"  width="18" height="6" fill="#c9a84c"/>
+        <rect x="3"  y="1"  width="2" height="2" fill="#c0392b"/>
+        <rect x="9"  y="1"  width="2" height="2" fill="#c0392b"/>
+        <rect x="15" y="1"  width="2" height="2" fill="#c0392b"/>
+      </svg>
+      <h2 class="htp-title">Cómo Jugar</h2>
+      <div class="htp-header__rule"></div>
+    </div>
+
+    <!-- ── SECCIONES DEL TABLÓN ─────────────────────────────────────────────── -->
+
+    <!-- Objetivo -->
+    <div class="htp-plank">
+      <div class="htp-plank__seam"></div>
+      <div class="htp-section">
+        <span class="htp-section__icon">🎯</span>
+        <div class="htp-section__body">
+          <h3 class="htp-section__title">Objetivo</h3>
+          <p class="htp-section__text">
+            Sobrevive <span class="htp-em">10 días</span> como rey.
+            Cada decisión puede salvar o hundir tu reinado.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mecánica -->
+    <div class="htp-plank">
+      <div class="htp-plank__seam"></div>
+      <div class="htp-section">
+        <span class="htp-section__icon">⚔️</span>
+        <div class="htp-section__body">
+          <h3 class="htp-section__title">Mecánica</h3>
+          <p class="htp-section__text">
+            Cada día surge un evento de corte.
+            Elige entre <span class="htp-em">tres opciones</span> (A, B o C).
+            Cada elección altera tus estadísticas reales.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="htp-plank">
+      <div class="htp-plank__seam"></div>
+      <div class="htp-section htp-section--stats">
+        <span class="htp-section__icon">📊</span>
+        <div class="htp-section__body">
+          <h3 class="htp-section__title">Estadísticas</h3>
+          <div class="htp-stats-grid">
+            <div class="htp-stat-chip">
+              <span>🧼</span><span class="htp-stat-chip__name">Higiene</span>
+            </div>
+            <div class="htp-stat-chip">
+              <span>🍗</span><span class="htp-stat-chip__name">Hambre</span>
+            </div>
+            <div class="htp-stat-chip">
+              <span>👑</span><span class="htp-stat-chip__name">Popularidad</span>
+            </div>
+            <div class="htp-stat-chip">
+              <span>💰</span><span class="htp-stat-chip__name">Riqueza</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Muerte -->
+    <div class="htp-plank htp-plank--death">
+      <div class="htp-plank__seam"></div>
+      <div class="htp-section">
+        <span class="htp-section__icon">💀</span>
+        <div class="htp-section__body">
+          <h3 class="htp-section__title htp-section__title--death">Derrota</h3>
+          <p class="htp-section__text">
+            Si cualquier stat llega a <span class="htp-em htp-em--red">0</span>,
+            tu reinado termina. Tu crónica queda en los
+            <span class="htp-em">Archivos Reales</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Victoria -->
+    <div class="htp-plank htp-plank--victory">
+      <div class="htp-plank__seam"></div>
+      <div class="htp-section">
+        <span class="htp-section__icon">🏆</span>
+        <div class="htp-section__body">
+          <h3 class="htp-section__title htp-section__title--victory">Victoria</h3>
+          <p class="htp-section__text">
+            Llega al <span class="htp-em htp-em--gold">día 10</span> con todas
+            las stats por encima de 0 y pasarás a la historia como rey legendario.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie del tablón -->
+    <div class="htp-footer">
+      <div class="htp-footer__rule"></div>
+      <p class="htp-footer__seal">— El Cronista Real —</p>
+    </div>
+
+  </div>
+</div>
