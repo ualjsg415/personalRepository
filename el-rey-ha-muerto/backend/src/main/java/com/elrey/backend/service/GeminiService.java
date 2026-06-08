@@ -113,7 +113,12 @@ public class GeminiService {
             }
 
             SCENE: elige el valor más apropiado: bedroom, throne-room, dining-hall, gardens, dungeon
-            STATS: valores enteros entre -25 y +25. Al menos una opción con consecuencias negativas notables.
+            STATS — sigue estas reglas de diseño:
+            - Opciones malas:  stats entre -20 y -25 en la stat principal afectada. Pueden afectar 1-2 stats.
+            - Opciones neutras: stats pequeños, entre -8 y +8.
+            - Opciones buenas: stats entre +8 y +15. Nunca más de +15 en una sola stat.
+            - Cada evento debe tener al menos UNA opción con una penalización de -20 o mayor.
+            - Las sumas totales de stats por evento no deben ser muy positivas (el juego debe ser difícil).
             immediateDeath: solo true si la opción es claramente absurda/suicida; entonces incluye deathMessage gracioso.
             """.formatted(headline, safeSummary);
     }

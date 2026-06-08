@@ -11,7 +11,6 @@ export class StatsBar implements OnChanges {
   @Input() stats: KingStats = { hygiene: 100, hunger: 100, popularity: 50, wealth: 100 };
   @Input() day = 1;
   @Input() playerName = 'Rey';
-
   deltas: { [key: string]: number } = {};
   private prevStats: KingStats | null = null;
   private deltaTimer: ReturnType<typeof setTimeout> | null = null;
@@ -41,21 +40,22 @@ export class StatsBar implements OnChanges {
     }
   }
 
-  get statList() {
-    return [
-      { key: 'hygiene',    icon: '🧼', label: 'Higiene',     value: this.stats.hygiene },
-      { key: 'hunger',     icon: '🍗', label: 'Hambre',      value: this.stats.hunger },
-      { key: 'popularity', icon: '👑', label: 'Popularidad', value: this.stats.popularity },
-      { key: 'wealth',     icon: '💰', label: 'Riqueza',     value: this.stats.wealth },
-    ];
-  }
-
   get deathStat(): string | null {
     if (this.stats.hygiene    === 0) return 'hygiene';
     if (this.stats.hunger     === 0) return 'hunger';
     if (this.stats.popularity === 0) return 'popularity';
     if (this.stats.wealth     === 0) return 'wealth';
     return null;
+  }
+
+  get statList() {
+    const ds = this.deathStat;
+    return [
+      { key: 'hygiene',    icon: '🧼', label: 'Higiene',     value: ds === 'hygiene'    ? 0 : this.stats.hygiene },
+      { key: 'hunger',     icon: '🍗', label: 'Hambre',      value: ds === 'hunger'     ? 0 : this.stats.hunger },
+      { key: 'popularity', icon: '👑', label: 'Popularidad', value: ds === 'popularity' ? 0 : this.stats.popularity },
+      { key: 'wealth',     icon: '💰', label: 'Riqueza',     value: ds === 'wealth'     ? 0 : this.stats.wealth },
+    ];
   }
 
   barColor(value: number): string {
