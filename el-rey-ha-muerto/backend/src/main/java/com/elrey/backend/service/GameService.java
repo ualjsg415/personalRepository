@@ -4,6 +4,7 @@ import com.elrey.backend.dto.*;
 import com.elrey.backend.entity.*;
 import com.elrey.backend.repository.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,6 +15,9 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 public class GameService {
+
+    @Value("${app.ai-events-enabled:true}")
+    private boolean aiEventsEnabled;
 
     private final GameSessionRepository sessionRepo;
     private final KingStatsRepository statsRepo;
@@ -145,10 +149,13 @@ public class GameService {
     // ── Helpers privados ──────────────────────────────────────────────────────
 
     private GameEvent findEventForDay(int day) {
-        // Siempre usa el ai_generated más reciente; cae al manual si no hay ninguno
-        return eventRepo.findFirstByDayTargetAndSourceOrderByScrapedAtDesc(day, "ai_generated")
-                .orElseGet(() -> eventRepo.findFirstByDayTarget(day)
-                        .orElseThrow(() -> new IllegalStateException("No hay evento para el día " + day)));
+        if (aiEventsEnabled) {
+            return eventRepo.findFirstByDayTargetAndSourceOrderByScrapedAtDesc(day, "ai_generated")
+                    .orElseGet(() -> eventRepo.findFirstByDayTarget(day)
+                            .orElseThrow(() -> new IllegalStateException("No hay evento para el día " + day)));
+        }
+        return eventRepo.findFirstByDayTarget(day)
+                .orElseThrow(() -> new IllegalStateException("No hay evento para el día " + day));
     }
 
     private GameStateDto endGame(GameSession session, KingStats stats, String deathMsg) {

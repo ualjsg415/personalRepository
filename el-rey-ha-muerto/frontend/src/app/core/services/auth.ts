@@ -6,6 +6,7 @@ export interface AuthUser {
   id: number;
   username: string;
   email: string;
+  token: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -35,8 +36,20 @@ export class AuthService {
     return raw ? JSON.parse(raw) : null;
   }
 
+  getToken(): string | null {
+    return this.getCurrentUser()?.token ?? null;
+  }
+
   isLoggedIn(): boolean {
-    return !!this.getCurrentUser();
+    const token = this.getToken();
+    if (!token) return false;
+
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload.exp * 1000 > Date.now();
+    } catch {
+      return false;
+    }
   }
 
   private saveUser(user: AuthUser): void {

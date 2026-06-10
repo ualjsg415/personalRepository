@@ -4,10 +4,21 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #7ec8e3; // azul cielo que coincide con la imagen
+  background-color: #7ec8e3;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  // Fondo panorámico que rellena los huecos laterales
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/assets/backgrounds/blurred-background.png') center / cover no-repeat;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+  }
 
   // Imagen: siempre ocupa el 100% de la altura → se ve completa
   &__bg {

@@ -30,6 +30,12 @@ gemini:
   api-key: ${GEMINI_API_KEY:}
   model: gemini-2.5-flash
 
+app:
+  ai-events-enabled: true
+  jwt:
+    secret: ${JWT_SECRET:elreyhamuerto-super-secret-jwt-signing-key-produccion-2024}
+    expiration: 86400000
+
 management:
   endpoints:
     web:

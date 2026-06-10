@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -23,6 +24,9 @@ import java.util.List;
 public class EventSeeder implements ApplicationRunner {
 
     private static final int ROTATION_DAYS = 3;
+
+    @Value("${app.ai-events-enabled:true}")
+    private boolean aiEventsEnabled;
 
     private final GameEventRepository eventRepo;
     private final ChoiceRepository    choiceRepo;
@@ -53,6 +57,10 @@ public class EventSeeder implements ApplicationRunner {
     }
 
     private void generateIfNeeded() {
+        if (!aiEventsEnabled) {
+            log.info("Generación AI desactivada (app.ai-events-enabled=false). Usando eventos manuales.");
+            return;
+        }
         if (isBatchRecent()) {
             log.info("Lote de eventos AI reciente (< {} días), seeder omitido.", ROTATION_DAYS);
             return;
