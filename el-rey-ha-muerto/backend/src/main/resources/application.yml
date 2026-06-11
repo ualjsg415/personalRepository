@@ -32,6 +32,8 @@ gemini:
 
 app:
   ai-events-enabled: true
+  scraping:
+    export-path: ./scraped_events.json
   jwt:
     secret: ${JWT_SECRET:elreyhamuerto-super-secret-jwt-signing-key-produccion-2024}
     expiration: 86400000

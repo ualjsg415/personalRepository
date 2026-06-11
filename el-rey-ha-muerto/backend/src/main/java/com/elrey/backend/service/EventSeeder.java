@@ -14,9 +14,12 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @RequiredArgsConstructor
@@ -27,6 +30,9 @@ public class EventSeeder implements ApplicationRunner {
 
     @Value("${app.ai-events-enabled:true}")
     private boolean aiEventsEnabled;
+
+    @Value("${app.scraping.export-path:./scraped_events.json}")
+    private String exportPath;
 
     private final GameEventRepository eventRepo;
     private final ChoiceRepository    choiceRepo;
@@ -118,6 +124,7 @@ public class EventSeeder implements ApplicationRunner {
             }
         }
         log.info("=== EventSeeder: {} eventos medievales generados y guardados ===", generated.size());
+        saveToJsonFile(generated, news);
     }
 
     // ── Parser del JSON que devuelve Gemini ───────────────────────────────────
@@ -180,6 +187,51 @@ public class EventSeeder implements ApplicationRunner {
             log.error("Error parseando JSON de Gemini: {}", e.getMessage());
             log.debug("JSON recibido: {}", raw);
             return null;
+        }
+    }
+
+    private void saveToJsonFile(List<EventWithChoices> events, List<RssScraperService.NewsItem> news) {
+        try {
+            List<Map<String, Object>> lista = new ArrayList<>();
+            for (int i = 0; i < events.size(); i++) {
+                EventWithChoices ec = events.get(i);
+                Map<String, Object> entrada = new LinkedHashMap<>();
+                entrada.put("dia", ec.event().getDayTarget());
+                if (i < news.size()) {
+                    entrada.put("titular_noticia", news.get(i).headline());
+                    entrada.put("resumen_noticia", news.get(i).summary());
+                }
+                entrada.put("titulo_evento", ec.event().getTitle());
+                entrada.put("descripcion", ec.event().getDescription());
+                entrada.put("escena", ec.event().getScene());
+                entrada.put("generado_en", ec.event().getScrapedAt().toString());
+
+                List<Map<String, Object>> opciones = new ArrayList<>();
+                for (Choice c : ec.choices()) {
+                    Map<String, Object> op = new LinkedHashMap<>();
+                    op.put("opcion", c.getLabel());
+                    op.put("texto", c.getText());
+                    Map<String, Integer> efectos = new LinkedHashMap<>();
+                    efectos.put("higiene", c.getStatHygiene());
+                    efectos.put("hambre", c.getStatHunger());
+                    efectos.put("popularidad", c.getStatPopularity());
+                    efectos.put("riqueza", c.getStatWealth());
+                    op.put("efectos_en_stats", efectos);
+                    opciones.add(op);
+                }
+                entrada.put("opciones", opciones);
+                lista.add(entrada);
+            }
+
+            Map<String, Object> raiz = new LinkedHashMap<>();
+            raiz.put("scrapeado_en", LocalDateTime.now().toString());
+            raiz.put("total_eventos", lista.size());
+            raiz.put("eventos", lista);
+
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(exportPath), raiz);
+            log.info("Eventos scrapeados exportados a: {}", new File(exportPath).getAbsolutePath());
+        } catch (Exception e) {
+            log.warn("No se pudo guardar el archivo JSON de eventos scrapeados: {}", e.getMessage());
         }
     }
 
