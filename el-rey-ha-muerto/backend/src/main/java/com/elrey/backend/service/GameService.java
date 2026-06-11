@@ -4,11 +4,12 @@ import com.elrey.backend.dto.*;
 import com.elrey.backend.entity.*;
 import com.elrey.backend.repository.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -16,15 +17,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GameService {
 
-    @Value("${app.ai-events-enabled:true}")
-    private boolean aiEventsEnabled;
-
     private final GameSessionRepository sessionRepo;
     private final KingStatsRepository statsRepo;
     private final GameEventRepository eventRepo;
     private final ChoiceRepository choiceRepo;
     private final SessionChoiceRepository sessionChoiceRepo;
     private final ActiveFlagRepository activeFlagRepo;
+    private final SessionEventPlaylistRepository playlistRepo;
 
     // ── Iniciar partida ───────────────────────────────────────────────────────
 
@@ -37,6 +36,8 @@ public class GameService {
                 .build();
         session = sessionRepo.save(session);
 
+        buildAndSavePlaylist(session.getId());
+
         KingStats stats = KingStats.builder()
                 .sessionId(session.getId())
                 .day(1)
@@ -44,7 +45,7 @@ public class GameService {
                 .build();
         stats = statsRepo.save(stats);
 
-        GameEvent event = findEventForDay(1);
+        GameEvent event = findEventForPosition(session.getId(), 1);
 
         return buildState(session, stats, event,
                 "El primer día de tu glorioso reinado ha comenzado. ¡Que los dioses te acompañen!");
@@ -61,7 +62,13 @@ public class GameService {
             return buildState(session, stats, null, session.getCauseOfDeath());
         }
 
-        GameEvent event = findEventForDay(stats.getDay());
+        // Victoria: partida terminada con el jugador vivo
+        if (session.getEndedAt() != null) {
+            return buildState(session, stats, null,
+                    "¡Increíble! Has sobrevivido todos los días. El reino está... sorprendentemente intacto.");
+        }
+
+        GameEvent event = findEventForPosition(sessionId, stats.getDay());
         return buildState(session, stats, event, narratorFor(stats.getDay()));
     }
 
@@ -69,7 +76,7 @@ public class GameService {
 
     public GameStateDto processChoice(Long sessionId, Long choiceId) {
         GameSession session = findSession(sessionId);
-        if (!Boolean.TRUE.equals(session.getIsAlive())) {
+        if (!Boolean.TRUE.equals(session.getIsAlive()) || session.getEndedAt() != null) {
             throw new IllegalStateException("Esta partida ya ha terminado");
         }
 
@@ -127,15 +134,16 @@ public class GameService {
             return endGame(session, next, triggered.get(0).getDeathMessage());
         }
 
-        // ¡Supervivencia! (se superan los 10 días)
-        if (nextDay > 10) {
-            KingStats final_ = saveStats(sessionId, 10, hygiene, hunger, popularity, wealth);
+        // ¿Hay más eventos en la playlist? Si no, el rey ha ganado
+        boolean hasNextEvent = playlistRepo.findBySessionIdAndPosition(sessionId, nextDay).isPresent();
+        if (!hasNextEvent) {
+            KingStats final_ = saveStats(sessionId, current.getDay(), hygiene, hunger, popularity, wealth);
             session.setIsAlive(true);
-            session.setDaysSurvived(10);
+            session.setDaysSurvived(current.getDay());
             session.setEndedAt(LocalDateTime.now());
             sessionRepo.save(session);
             return buildState(session, final_, null,
-                    "¡Increíble! Has sobrevivido los 10 días. El reino está... sorprendentemente intacto.");
+                    "¡Increíble! Has sobrevivido todos los días. El reino está... sorprendentemente intacto.");
         }
 
         // Avanzar al día siguiente
@@ -143,19 +151,48 @@ public class GameService {
         session.setDaysSurvived(nextDay);
         sessionRepo.save(session);
 
-        return buildState(session, next, findEventForDay(nextDay), narratorFor(nextDay));
+        return buildState(session, next, findEventForPosition(sessionId, nextDay), narratorFor(nextDay));
     }
 
     // ── Helpers privados ──────────────────────────────────────────────────────
 
-    private GameEvent findEventForDay(int day) {
-        if (aiEventsEnabled) {
-            return eventRepo.findFirstByDayTargetAndSourceOrderByScrapedAtDesc(day, "ai_generated")
-                    .orElseGet(() -> eventRepo.findFirstByDayTarget(day)
-                            .orElseThrow(() -> new IllegalStateException("No hay evento para el día " + day)));
+    // Máximo de eventos intermedios (posiciones 2-19) para que el juego sea siempre 20 días
+    private static final int MAX_MIDDLE_EVENTS = 18;
+
+    private void buildAndSavePlaylist(Long sessionId) {
+        GameEvent first = eventRepo.findFirstByDayTargetAndSource(1, "manual")
+                .orElseThrow(() -> new IllegalStateException("No hay evento inicial manual (día 1)"));
+        GameEvent last = eventRepo.findFirstByDayTargetAndSource(10, "manual")
+                .orElseThrow(() -> new IllegalStateException("No hay evento final manual (día 10)"));
+
+        List<GameEvent> all = eventRepo.findAll();
+        List<GameEvent> pool = new ArrayList<>(all.stream()
+                .filter(e -> !e.getId().equals(first.getId()) && !e.getId().equals(last.getId()))
+                .toList());
+        Collections.shuffle(pool);
+
+        // Limitar a MAX_MIDDLE_EVENTS para mantener siempre 20 días de juego
+        List<GameEvent> middle = pool.subList(0, Math.min(MAX_MIDDLE_EVENTS, pool.size()));
+
+        List<Long> ids = new ArrayList<>();
+        ids.add(first.getId());
+        middle.forEach(e -> ids.add(e.getId()));
+        ids.add(last.getId());
+
+        for (int i = 0; i < ids.size(); i++) {
+            playlistRepo.save(SessionEventPlaylist.builder()
+                    .sessionId(sessionId)
+                    .position(i + 1)
+                    .eventId(ids.get(i))
+                    .build());
         }
-        return eventRepo.findFirstByDayTarget(day)
-                .orElseThrow(() -> new IllegalStateException("No hay evento para el día " + day));
+    }
+
+    private GameEvent findEventForPosition(Long sessionId, int position) {
+        SessionEventPlaylist entry = playlistRepo.findBySessionIdAndPosition(sessionId, position)
+                .orElseThrow(() -> new IllegalStateException("No hay evento en posición " + position));
+        return eventRepo.findById(entry.getEventId())
+                .orElseThrow(() -> new IllegalStateException("Evento no encontrado: " + entry.getEventId()));
     }
 
     private GameStateDto endGame(GameSession session, KingStats stats, String deathMsg) {
@@ -225,12 +262,22 @@ public class GameService {
             case 2  -> "Segundo día. Las intrigas del castillo empiezan a manifestarse.";
             case 3  -> "Tercer día. El reino observa cada uno de tus movimientos.";
             case 4  -> "Cuarto día. Algo en el ambiente huele raro... y no es solo tú.";
-            case 5  -> "Quinto día. La mitad del reinado. ¿Seguirás vivo mañana?";
+            case 5  -> "Quinto día. El reino no deja de sorprenderte.";
             case 6  -> "Sexto día. Los rumores del castillo llegan a tus oídos.";
             case 7  -> "Séptimo día. Una semana reinando. Casi un récord para tu dinastía.";
-            case 8  -> "Octavo día. El final se acerca. ¿Será tuyo o del reino?";
-            case 9  -> "Noveno día. Un paso más y lo habrás conseguido.";
-            case 10 -> "Décimo día. El último. Que los dioses te protejan.";
+            case 8  -> "Octavo día. Las tensiones del reino van en aumento.";
+            case 9  -> "Noveno día. Algo se trama en las sombras del castillo.";
+            case 10 -> "Décimo día. Has sobrevivido más que la mayoría. El reino empieza a respetarte.";
+            case 11 -> "Undécimo día. Las noticias del reino llegan hasta tus aposentos.";
+            case 12 -> "Duodécimo día. El peso de la corona se hace notar.";
+            case 13 -> "Decimotercer día. Trece días de reinado. Los supersticiosos se persignan.";
+            case 14 -> "Decimocuarto día. Dos semanas en el trono. Eso ya es historia.";
+            case 15 -> "Decimoquinto día. La mitad del camino. ¿Llegarás al final?";
+            case 16 -> "Decimosexto día. El reino empieza a susurrar sobre tu longevidad.";
+            case 17 -> "Decimoséptimo día. Solo tres días más separan al mediocre del legendario.";
+            case 18 -> "Decimoctavo día. Los nobles empiezan a respetarte de verdad.";
+            case 19 -> "Decimonoveno día. Un último escollo antes de la gloria eterna.";
+            case 20 -> "Vigésimo día. El último. Que los dioses te protejan.";
             default -> "El día continúa...";
         };
     }

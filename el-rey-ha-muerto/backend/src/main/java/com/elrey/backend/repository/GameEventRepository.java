@@ -12,6 +12,7 @@ import java.util.Optional;
 
 public interface GameEventRepository extends JpaRepository<GameEvent, Long> {
     Optional<GameEvent> findFirstByDayTarget(Integer dayTarget);
+    Optional<GameEvent> findFirstByDayTargetAndSource(Integer dayTarget, String source);
     Optional<GameEvent> findFirstByDayTargetAndSourceOrderByScrapedAtDesc(Integer dayTarget, String source);
     Optional<GameEvent> findTopBySourceOrderByScrapedAtDesc(String source);
 

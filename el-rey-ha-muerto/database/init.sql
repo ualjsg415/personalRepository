@@ -72,6 +72,14 @@ CREATE TABLE IF NOT EXISTS active_flags (
     created_at    TIMESTAMP   NOT NULL DEFAULT NOW()
 );
 
+CREATE TABLE IF NOT EXISTS session_event_playlist (
+    id          BIGSERIAL PRIMARY KEY,
+    session_id  BIGINT    NOT NULL REFERENCES game_sessions(id) ON DELETE CASCADE,
+    position    INT       NOT NULL,
+    event_id    BIGINT    NOT NULL REFERENCES game_events(id),
+    UNIQUE (session_id, position)
+);
+
 -- ════════════════════════════════════════════
 --  DATOS INICIALES — 10 eventos, uno por día
 -- ════════════════════════════════════════════
@@ -84,7 +92,7 @@ INSERT INTO game_events (source, day_target, title, description, scene, created_
 
 ('manual', 2,
  'El Primer Decreto Real',
- 'Los nobles esperan tu primer decreto oficial. Esta decisión definirá tu reinado y cómo te recordará la historia. O al menos los próximos ocho días.',
+ 'Los nobles esperan tu primer decreto oficial. Esta decisión definirá tu reinado y cómo te recordará la historia. O al menos los próximos días.',
  'throne-room', NOW()),
 
 ('manual', 3,
@@ -113,7 +121,7 @@ INSERT INTO game_events (source, day_target, title, description, scene, created_
  'bedroom', NOW()),
 
 ('manual', 8,
- 'El Banquete del Octavo Día',
+ 'El Banquete Culinario',
  'El nuevo cocinero te mira fijamente mientras sirve la sopa. Demasiado fijamente. La sopa tiene un color que no recuerdas haber visto en ningún alimento conocido.',
  'dining-hall', NOW()),
 
@@ -123,8 +131,8 @@ INSERT INTO game_events (source, day_target, title, description, scene, created_
  'throne-room', NOW()),
 
 ('manual', 10,
- 'El Décimo Amanecer',
- 'Has llegado. Diez días como rey y sigues respirando. El pueblo sale a las calles, los nobles se miran confundidos y el médico real cancela su reserva de funeral.',
+ 'El Vigésimo Amanecer',
+ 'Has llegado. 20 días como rey y sigues respirando. El pueblo sale a las calles, los nobles se miran confundidos y el médico real cancela su reserva de funeral.',
  'gardens', NOW());
 
 -- ── DÍA 1 ──────────────────────────────────────────────────────────────────
